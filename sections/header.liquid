@@ -1,8 +1,8 @@
 <nav>
-	<a href="/">{{shop.name | escape }}</a>
+	<a href="/" class="h1 title">{{shop.name | escape }}</a>
 	<ul>
 		{%- for link in linklists.main-menu.links -%}
-		<li><a href="{{ link.url }}" class="h1 title">{{ link.title | escape }}</a></li>
+		<li><a href="{{ link.url }}" >{{ link.title | escape }}</a></li>
 		{%- endfor -%}
 		
 	</ul>
