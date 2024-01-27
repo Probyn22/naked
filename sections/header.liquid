@@ -11,8 +11,22 @@
 	]
 }
 {% endschema %} 
+
+
 <nav>
+	{%- comment -%}
+    Questo pulsante consente di aprire/chiudere il menu di navigazione sul cellulare.
+  	{%- endcomment -%}
+	  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#header-main-menu" aria-controls="header-main-menu" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+
+
+	{%- comment -%}
+    Elemento principale del brand posizionato in alto a sinistra nella barra di navigazione.
+  	{%- endcomment -%}
 	<a href="/" class="h1 title">{{shop.name | escape }}</a>
+
 	<ul>
 		{%- for link in linklists.main-menu.links -%}
 		<li><a href="{{ link.url }}" >{{ link.title | escape }}</a></li>
@@ -41,5 +55,34 @@
 	{%- unless primary_link_list == blank -%}
 	<ul>
 		{%- for link in primary_link_list.links -%}
+		{%- assign child_link_list_handle = link.title | handle -%}
+		{%- assign child_link_list = linklists [child_link_list_handle] -%}
+		{%- if child_link_list and child_link_list.links.size > 0 -%}
+		{%- assign has_child_link_list = true -%}
+		{%- else -%}
+		{%- assign has_child_link_list = false -%}
+		{%- endif -%}
+		<li>
+			<a href="{{ link.url }}">{{ link.title | escape }}</a>
+			{%- if has_child_link_list -%}
+			<div class="dropdown-menu">
+				{%- for child_link in child_link_list.links -%}
+					<a href="{{ child.link.url }}">
+						{{ child_link.title | escape }}
+					</a>	
+				{%- endfor -%}
+			</div>	
+		{%- endif -%}
+		</li>
+		{%- endfor -%}
+				
+		
+		
+		
+		
+		
+		
+
+
 	</ul>	
 </nav>
