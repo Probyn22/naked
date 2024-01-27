@@ -7,6 +7,9 @@
   <body>
     {%- section 'header' -%}
     {{ content_for_layout }}
+    {%- section 'footer' -%}
+    
     {{- 'theme.js' | asset_url | script_tag -}}
+    {{- 'jquery-3.7.1.min.js' | asset_url | script_tag -}}
   </body>
 </html>
