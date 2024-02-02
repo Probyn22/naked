@@ -1,17 +1,76 @@
 {% schema %}
 {
   "name": "Header",
-  "settings": [
-    {
-      "id": "primary_link_list",
-      "type": "link_list",
-      "label": "Menu principale",
-      "default": "main-menu"
-    }
-  ]
+  "blocks":[
+			{
+				"type": "link_list",
+				"name": "Main menu",
+				"settings": [
+				    {
+				      "id": "primary_link_list",
+				      "type": "link_list",
+				      "label": "Menu principale",
+				      "default": "main-menu"
+				    }
+				  ]
+			},
+			{
+				"type": "image_picker",
+				"id":"logo",
+				"label":{
+					"it":"logo",
+					"en":"logo"
+				} 
+			},
+			{
+				"type": "range",
+				"id":"logo_max_width",
+				"label":{
+					"it":"larghezza massima del logo",
+					"en":"logo max width"
+				},
+				"min":50,
+				"max":250,
+				"step":5,
+				"unit":{
+					"it":"px",
+					"en":"px"
+				},
+				"min":"",
+				"min":"",
+				"min":"", 
+			}
+		]
+
+
+
+  
 }
 
 {% endschema %}
+
+
+{% schema %}
+{
+	"name": "footer",
+	"blocks":[
+			{
+				"type": "link_list",
+				"name": "Navigation menu",
+				"settings": [
+					{
+						"id": "link_list",
+						"type":"link_list",
+						"label":"Navigation menu"
+					}
+				]
+			},
+			{
+				"type": "payment_icons",
+				"name": "Payment icons"
+			}
+		]
+}
 
 
 
