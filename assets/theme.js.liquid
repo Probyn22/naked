@@ -1,0 +1,13 @@
+$( document ).ready(function() {
+
+	$('#catalogo-dropdown-toggle').mouseenter(function(){
+			$('.dropdown-menu').stop().slideDown();
+			
+		});
+		$('.dropdown-menu').mouseleave(function(){
+			$(this).slideUp();
+		});
+
+
+
+});//chiudo il document ready
