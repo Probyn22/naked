@@ -1,41 +1,30 @@
 {% schema %}
 {
   "name": "Header",
-  "blocks":[
-			{
-				"type": "link_list",
-				"name": "Main menu",
-				"settings": [
-				    {
-				      "id": "primary_link_list",
-				      "type": "link_list",
-				      "label": "Menu principale",
-				      "default": "main-menu"
-				    }
-				  ]
-			},
-			
-			{
-                "type": "image",
-                "name" : "image block",
-                "settings" : [
-                    {
-                        "type": "image_picker",
-                        "label": "your image",
-                        "id" : "image"
-                    }
-                ]
+  "settings": [
+    {
+      "id": "primary_link_list",
+      "type": "link_list",
+      "label": "Menu principale",
+      "default": "main-menu"
+    }, 
+    {
+        "type": "image",
+        "name" : "logo",
+        "settings" : [
+            {
+                "type": "image_picker",
+                "label": "your logo",
+                "id" : "image"
             }
-			
-
-		]
-
-
-
-  
+        ]
+    }
+  ]
 }
-
 {% endschema %}
+
+
+
 
 
 
@@ -53,7 +42,7 @@
 				{%- endif -%}
 
 				  <a href="/" itemprop="url">
-				  	 <img src="{{ block.settings.image | img_url:'master'}}"/>
+				  	 <img src="{{ block.settings.image | img_url}}"/>
 				    <img src="{{ "logo.svg" | asset_url }}"
 				      alt="{{ shop.name }}"
 				      itemprop="logo">
