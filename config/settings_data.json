@@ -1,0 +1,37 @@
+{
+  "current": {
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "primary_link_list": "main-menu"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "link_list_WX6988": {
+            "type": "link_list",
+            "settings": {
+              "link_list": ""
+            }
+          },
+          "payment_icons_Cmj67J": {
+            "type": "payment_icons",
+            "settings": {
+            }
+          }
+        },
+        "block_order": [
+          "link_list_WX6988",
+          "payment_icons_Cmj67J"
+        ],
+        "settings": {
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
+  }
+}
