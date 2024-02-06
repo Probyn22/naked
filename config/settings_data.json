@@ -3,6 +3,16 @@
     "sections": {
       "header": {
         "type": "header",
+        "blocks": {
+          "image_qqfeX4": {
+            "type": "image",
+            "settings": {
+            }
+          }
+        },
+        "block_order": [
+          "image_qqfeX4"
+        ],
         "settings": {
         }
       },
