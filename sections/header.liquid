@@ -14,32 +14,20 @@
 				    }
 				  ]
 			},
+			
 			{
-				"type": "image_picker",
-				"id":"logo",
-				"label":{
-					"it":"logo",
-					"en":"logo"
-				} 
-			},
-			{
-				"type": "range",
-				"id":"logo_max_width",
-				"label":{
-					"it":"larghezza massima del logo",
-					"en":"logo max width"
-				},
-				"min":50,
-				"max":250,
-				"step":5,
-				"unit":{
-					"it":"px",
-					"en":"px"
-				},
-				"min":"",
-				"min":"",
-				"min":"", 
-			}
+                "type": "image",
+                "name" : "image block",
+                "settings" : [
+                    {
+                        "type": "image_picker",
+                        "label": "your image",
+                        "id" : "image"
+                    }
+                ]
+            }
+			
+
 		]
 
 
@@ -65,6 +53,7 @@
 				{%- endif -%}
 
 				  <a href="/" itemprop="url">
+				  	 <img src="{{ block.settings.image | img_url:'master'}}"/>
 				    <img src="{{ "logo.svg" | asset_url }}"
 				      alt="{{ shop.name }}"
 				      itemprop="logo">
