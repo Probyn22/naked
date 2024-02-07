@@ -226,7 +226,7 @@
 			
 			li{
 				min-width:21px;
-				height: 21px;
+				height: 25px;
 				margin:0 0 0 10px;
 				overflow: hidden;
 				a{
@@ -250,12 +250,16 @@
 				}
 			}
 		}
+
+		#menu_toggle{
+			display:none;
+		}
+
+		
 	}
 
 
-#menu_toggle{
-	display:none;
-}
+
 /*/gestione megamenu/*/
 #menu_tabs.genders{
 	display: none;
