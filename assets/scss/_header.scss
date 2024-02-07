@@ -1,59 +1,50 @@
 /* CSS Document 
 
 <div id="shopify-section-header" class="shopify-section">
-
-
-
-
-
-
 <header>
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-sm-12 col-md-3"><h1 itemscope="" itemtype="http://schema.org/Organization"><a href="/" itemprop="url">
-				    <img src="//polosoftware.myshopify.com/cdn/shop/t/9/assets/logo.jpg?v=91193734977037167631707303273" alt="Polosoftware" itemprop="logo">
-				  </a></h1><a href="javascript:;" id="menu-toggle"><i class="las la-bars"></i></a>
-				<div id="menu_mobile"><ul class="navbar-nav mr-auto"><li class="nav-item active ">
-				          <a href="/" class="nav-link  %}">
-				            Home <span class="sr-only">(current)</span>
-				          </a></li><li class="nav-item  dropdown">
-				          <a href="/collections/all" class="nav-link dropdown-toggle %}" id="catalogo-dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				            Catalogo 
-				          </a><div class="dropdown-menu" aria-labelledby="catalogo-dropdown-toggle" style="display: block;"><a href="/collections/maglie" class="dropdown-item">Maglie</a><a href="/collections/donna" class="dropdown-item">Donna</a></div></li><li class="nav-item  ">
-				          <a href="/pages/designers" class="nav-link  %}">
-				            Designers 
-				          </a></li><li class="nav-item  ">
-				          <a href="/blogs/notizie" class="nav-link  %}">
-				            Magazine 
-				          </a></li></ul></div>
-
-				
-			</div>
-			<div class="col-sm-12 col-md-6"><ul class="navbar-nav mr-auto"><li class="nav-item active ">
-			          <a href="/" class="nav-link  %}">
-			            Home <span class="sr-only">(current)</span>
-			          </a></li><li class="nav-item  dropdown">
-			          <a href="/collections/all" class="nav-link dropdown-toggle %}" id="catalogo-dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			            Catalogo 
-			          </a><div class="dropdown-menu" aria-labelledby="catalogo-dropdown-toggle" style="display: block;"><a href="/collections/maglie" class="dropdown-item">Maglie</a><a href="/collections/donna" class="dropdown-item">Donna</a></div></li><li class="nav-item  ">
-			          <a href="/pages/designers" class="nav-link  %}">
-			            Designers 
-			          </a></li><li class="nav-item  ">
-			          <a href="/blogs/notizie" class="nav-link  %}">
-			            Magazine 
-			          </a></li></ul></div>
-			<div class="col-sm-12 col-md-3"><ul class="navbar-nav">
-				      <li class="nav-item">
-				        <a class="nav-link" href="/search">Cerca</a>
-				      </li><li class="nav-item">
-				            <a class="nav-link" href="/account/login">Log in</a>
-				          </li><li class="nav-item">
-				        <a class="nav-link" href="/cart">Carrello (0)</a>
-				      </li>
-				    </ul>
-			</div>
-		</div>
-	</div>
+	<h1 itemscope="" itemtype="http://schema.org/Organization">
+		<a href="/" itemprop="url">
+			<img src="//polosoftware.myshopify.com/cdn/shop/t/9/assets/logo.jpg?v=91193734977037167631707303273" alt="Polosoftware" itemprop="logo">
+		</a>
+	</h1>
+	<a href="javascript:;" id="menu-toggle"><i class="las la-bars"></i></a>
+	<ul class="navbar-nav mr-auto">
+		<li class="nav-item active ">
+			<a href="/" class="nav-link  %}">
+        		Home <span class="sr-only">(current)</span>
+      		</a>
+      	</li>
+      	<li class="nav-item  dropdown">
+		    <a href="/collections/all" class="nav-link dropdown-toggle %}" id="catalogo-dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		        Catalogo 
+		    </a>
+		    <div class="dropdown-menu" aria-labelledby="catalogo-dropdown-toggle" style="display: none;">
+		    	<a href="/collections/maglie" class="dropdown-item">Maglie</a>
+		    	<a href="/collections/donna" class="dropdown-item">Donna</a>
+		    </div>
+		</li>
+		<li class="nav-item  ">
+		    <a href="/pages/designers" class="nav-link  %}">
+		        Designers 
+		    </a>
+		</li>
+      	<li class="nav-item  ">
+      		<a href="/blogs/notizie" class="nav-link  %}">
+       			 Magazine 
+      		</a>
+      	</li>
+    </ul>
+    <ul class="navbar-nav">
+    	<li class="nav-item">
+        	<a class="nav-link" href="/search">Cerca</a>
+      	</li>
+      	<li class="nav-item">
+            <a class="nav-link" href="/account/login">Log in</a>
+        </li><li class="nav-item">
+        	<a class="nav-link" href="/cart">Carrello (0)</a>
+      	</li>
+    </ul>
+			
 </header>
 
 
@@ -62,395 +53,382 @@
 
 */
 #shopify-section-header{
-
-
-header{
+	display: block;
+	width: 100%;
 	background: $bianco;
-	display: flex;
-	flex-flow: column;
-	justify-content: flex-start;
 	position: sticky;
 	top:0;
 	z-index: 9010;
-	max-width: none;
-	width:100%;
-	padding: 0px !important;
-	z-index: 9001;
-	margin:0;
-	
-	.row{
-		margin:0 !important;
-		
-        &:last-child{
-        	border-bottom:solid 1px $blu;
-        }
-		
-		div{
-			padding:0 !important;
-			
-		}
-	}
-	a:hover{text-decoration:none !important;}
-	/*prehead*/
-	#prehead{
-        display: none;
-	width:100%;
-	background: $bianco;
-	color:$blu;
-	text-align: center;
-	padding:3px 0px ;
-	font-size:0.875em;
-	font-weight: 300;
-	text-transform: uppercase;	
-	overflow: hidden;
-	letter-spacing: 2px;	
-	min-height: 29px;	
-	line-height: 29px;	
-	}
-	.container{
-	max-width: $break-xlarge
-	
-	}
-	/*logo*/
-	#logo{
+	margin: 0;
+	padding: 0;
+	header{
+		display: flex;
+		flex-flow: column;
+		justify-content: flex-start;
+		max-width: $break-xlarge;
 		width:100%;
-		max-width: 280px;
-		padding:0;
-		height: 40px;
-		overflow: hidden;
-		margin:15px auto;
-		position: relative;
-		text-align: center;
-		z-index: 11;
-		//background: url("../img/logo.png")no-repeat top left / 100% auto;
-		a{
-			display:block;
+		padding: 0px !important;
+		margin:0 auto;
+		
+		
+		a:hover{text-decoration:none !important;}
+		/*prehead*/
+		#prehead{
+	        display: none;
 			width:100%;
-			height:100%;
-			min-height: 40px;
-			padding:0 ;
-			margin: 0;
-			overflow: hidden;
-			//text-indent:-9000em;
-			//background:rgba(#ccc, 0.5);
-			img{
-				width:100%;
-				height: 100% ;
-				object-fit: contain !important;
-
-			}
-		}
-	}
-	#mainmenu.genders{
-	
-		width:auto;
-		
-		list-style: none;
-		margin: 5px auto;
-		padding: 0;
-		position: relative;
-			
-		display: flex;
-		flex-flow:row nowrap;
-		justify-content: center;
-		text-transform: uppercase;
-		font-weight: 400;	
-		
-		li{ 
-			display: inline-block;
+			background: $bianco;
+			color:$blu;
 			text-align: center;
-			width:auto;
-			margin:0 15px -1px ;
-			white-space: nowrap;
+			padding:3px 0px ;
+			font-size:0.875em;
+			font-weight: 300;
+			text-transform: uppercase;	
 			overflow: hidden;
-			a{
-				display: block;
-				color:$bianco;
-				font-size:1.0em;
-				border-bottom:solid 2px transparent;
-				&:hover, &.active{
-					border-bottom:solid 2px $bianco;
-				}
-			}
-		
+			letter-spacing: 2px;	
+			min-height: 29px;	
+			line-height: 29px;	
 		}
-	}
-	#mainmenu.categories{
-		width:100%;
-		position: relative;
-		list-style: none;
-		margin: 10px 0 0;
-		padding: 0;
-		display: flex;
-		flex-flow:row nowrap;
-		justify-content: center;
-		align-items: center;	
-		text-transform: uppercase;
-		li{ 
-			margin:0 0 0 0;
-			padding:0 7.5px;
-			
-			position:relative;
+		
+		/*logo*/
+		#logo{
+			width:100%;
+			max-width: 280px;
+			padding:0;
+			height: 40px;
+			overflow: hidden;
+			margin:15px auto;
+			position: relative;
+			text-align: center;
+			z-index: 11;
+			//background: url("../img/logo.png")no-repeat top left / 100% auto;
 			a{
-				display: inline-block;
-				color:$bianco;
-				width:auto;
-				font-size:1em;
-				font-weight: 300;
-				//letter-spacing: 0.9px;
-				padding: 0 0 10px;
-				border-bottom:solid 1px  $blu;
-				&.active {
-					border-bottom:solid 1px $bianco;
-					
-				}
-				&.sales{
-					color:$sfondo;
-				}
-			}
-			ul.sub_menu{
-				display: none;
-				width:138px;
-				list-style: none;
-				margin:0 -7.5px 1px;
+				display:block;
+				width:100%;
+				height:100%;
+				min-height: 40px;
 				padding:0 ;
-				position:absolute;
-				 background:rgba($bianco, 0.9);
-				border: 0;
-				border-bottom:solid 1px $nero;
-				&:before{
-					content:'';
-					display: block;
+				margin: 0;
+				overflow: hidden;
+				//text-indent:-9000em;
+				//background:rgba(#ccc, 0.5);
+				img{
 					width:100%;
-					background:$sfondo;
-					height: 25px;
-					position:relative;
+					height: 100% ;
+					object-fit: contain !important;
 
 				}
+			}
+		}
+		#mainmenu.genders{
+		
+			width:auto;
+			
+			list-style: none;
+			margin: 5px auto;
+			padding: 0;
+			position: relative;
 				
-				li{
-					background:transparent;
-					margin: 0;
-					padding:0 0 5px 0;
-					border-left:solid 1px $nero;
-					border-right:solid 1px $nero;
-					&:first-child{
-						padding: 5px 0;
+			display: flex;
+			flex-flow:row nowrap;
+			justify-content: center;
+			text-transform: uppercase;
+			font-weight: 400;	
+			
+			li{ 
+				display: inline-block;
+				text-align: center;
+				width:auto;
+				margin:0 15px -1px ;
+				white-space: nowrap;
+				overflow: hidden;
+				a{
+					display: block;
+					color:$bianco;
+					font-size:1.0em;
+					border-bottom:solid 2px transparent;
+					&:hover, &.active{
+						border-bottom:solid 2px $bianco;
+					}
+				}
+			
+			}
+		}
+		#mainmenu.categories{
+			width:100%;
+			position: relative;
+			list-style: none;
+			margin: 10px 0 0;
+			padding: 0;
+			display: flex;
+			flex-flow:row nowrap;
+			justify-content: center;
+			align-items: center;	
+			text-transform: uppercase;
+			li{ 
+				margin:0 0 0 0;
+				padding:0 7.5px;
+				
+				position:relative;
+				a{
+					display: inline-block;
+					color:$bianco;
+					width:auto;
+					font-size:1em;
+					font-weight: 300;
+					//letter-spacing: 0.9px;
+					padding: 0 0 10px;
+					border-bottom:solid 1px  $blu;
+					&.active {
+						border-bottom:solid 1px $bianco;
+						
+					}
+					&.sales{
+						color:$sfondo;
+					}
+				}
+				ul.sub_menu{
+					display: none;
+					width:138px;
+					list-style: none;
+					margin:0 -7.5px 1px;
+					padding:0 ;
+					position:absolute;
+					 background:rgba($bianco, 0.9);
+					border: 0;
+					border-bottom:solid 1px $nero;
+					&:before{
+						content:'';
+						display: block;
+						width:100%;
+						background:$sfondo;
+						height: 25px;
+						position:relative;
+
 					}
 					
-				}
-
-				a{
-					font-size:0.9em;
-					border-bottom:none;
-					display: inline-block;
-					padding:3px 10px;
-					margin: 0 10px;
-					color:$nero;
-				}
-
-			}
-			&:hover{
-					a{
-						border-bottom:solid 1px $blu;
-						color:$bianco;
+					li{
+						background:transparent;
+						margin: 0;
+						padding:0 0 5px 0;
+						border-left:solid 1px $nero;
+						border-right:solid 1px $nero;
+						&:first-child{
+							padding: 5px 0;
+						}
+						
 					}
-					> ul{
-						display: block;
-						a{border:none; 
-							&:hover{
-								color:$blu;
+
+					a{
+						font-size:0.9em;
+						border-bottom:none;
+						display: inline-block;
+						padding:3px 10px;
+						margin: 0 10px;
+						color:$nero;
+					}
+
+				}
+				&:hover{
+						a{
+							border-bottom:solid 1px $blu;
+							color:$bianco;
+						}
+						> ul{
+							display: block;
+							a{border:none; 
+								&:hover{
+									color:$blu;
+								}
 							}
 						}
 					}
-				}
-			
-		}
-	}
-	#tools, #lng{
-		
-		
-		position: absolute;
-		top:15px;
-		right:15px;
-		padding: 0 15px 0 0;
-		margin:7px 0 0 ;
-		transform: translateY(0);	
-		display: flex;
-		flex-flow:row nowrap;
-		justify-content: flex-end;
-		text-transform: lowercase;
-		font-weight: 600;	
-		list-style: none;
-		z-index: 30;
-		
-		li{
-			width:21px;
-			height: 21px;
-			margin:0 0 0 10px;
-			a{
-				display: block;
-				width:100%;
-				height: 100%;
-				line-height: 21px;
-				text-align: center;
-				font-size:1.2em;
-				color:$blu;
-				position: relative;
-				text-transform: uppercase;
-				background: $bianco;
-				i{
-				display: block;
-				width:100%;
-				height: 100%;
-				line-height: 21px;
-				text-align: center;
-				color:$blu;
-				}
 				
-				span{
+			}
+		}
+		#tools, #lng{
+			
+			
+			position: absolute;
+			top:15px;
+			right:15px;
+			padding: 0 15px 0 0;
+			margin:7px 0 0 ;
+			transform: translateY(0);	
+			display: flex;
+			flex-flow:row nowrap;
+			justify-content: flex-end;
+			text-transform: lowercase;
+			font-weight: 600;	
+			list-style: none;
+			z-index: 30;
+			
+			li{
+				width:21px;
+				height: 21px;
+				margin:0 0 0 10px;
+				a{
 					display: block;
-					width: 15px;
-					height: 15px;
-					line-height: 13px;
-					font-size:0.5em;
-					position: absolute;
-					bottom:-10px;
-					right: -10px;
-					background: $bianco !important;
-					color:$blu_chiaro;
-					border:solid 1px $blu_chiaro;				
-					text-indent: 0 !important
+					width:100%;
+					height: 100%;
+					line-height: 21px;
+					text-align: center;
+					font-size:1.2em;
+					color:$blu;
+					position: relative;
+					text-transform: uppercase;
+					background: $bianco;
+					i{
+					display: block;
+					width:100%;
+					height: 100%;
+					line-height: 21px;
+					text-align: center;
+					color:$blu;
+					}
 					
-				}
-				&.lang{
-					font-size: 0.9em;
-					
-				}
-				&:hover{
-					
-					color:$blu_chiaro;
 					span{
-						background:$blu_chiaro !important;
-						border-color:$blu_chiaro;
-						color: $bianco;
+						display: block;
+						width: 15px;
+						height: 15px;
+						line-height: 13px;
+						font-size:0.5em;
+						position: absolute;
+						bottom:-10px;
+						right: -10px;
+						background: $bianco !important;
+						color:$blu_chiaro;
+						border:solid 1px $blu_chiaro;				
+						text-indent: 0 !important
+						
+					}
+					&.lang{
+						font-size: 0.9em;
+						
+					}
+					&:hover{
+						
+						color:$blu_chiaro;
+						span{
+							background:$blu_chiaro !important;
+							border-color:$blu_chiaro;
+							color: $bianco;
+						}
+					}
+				}
+				&.active{
+					a{
+						
+						color:$blu_chiaro;
+						
 					}
 				}
 			}
-			&.active{
-				a{
+		}
+		#tools{
+	        li:nth-child(1){
+	            width:auto;
+	            form#search_form{
+	            width:100%;
+	            position: relative;    
+
+	            input#input_search{
+	                width:100%;
+	                background: $sfondo !important;
+	                padding:5px 60px 5px 5px;
+	                margin: -3px 0 0 0 ;
+	                text-align: left;
+	                text-transform:uppercase;
+	                font-size: 1em;
+	                color:$blu;
+	                border:none;
+	            }
+
+				button{
+					display:block;
 					
-					color:$blu_chiaro;
-					
+					color:$bianco;
+					width:21px;
+					height: 21px;
+	                line-height: 21px;
+					overflow: hidden;
+					margin:0;
+					padding: 0;
+					border: none;
+					position: absolute;
+					top:0px;
+					right:3px;
+					font-size: 1em;
+
+	                mask: url("../img/icon/search.svg") no-repeat center / contain;
+				    -webkit-mask: url("../img/icon/search.svg") no-repeat center / contain;
+				    background:$blu; text-indent: -9000em;&:hover{background: $blu_chiaro;}}
+
 				}
-			}
-		}
-	}
-	#tools{
-        li:nth-child(1){
-            width:auto;
-            form#search_form{
-            width:100%;
-            position: relative;    
 
-            input#input_search{
-                width:100%;
-                background: $sfondo !important;
-                padding:5px 60px 5px 5px;
-                margin: -3px 0 0 0 ;
-                text-align: left;
-                text-transform:uppercase;
-                font-size: 1em;
-                color:$blu;
-                border:none;
-            }
 
-			button{
-				display:block;
 				
-				color:$bianco;
-				width:21px;
-				height: 21px;
-                line-height: 21px;
-				overflow: hidden;
-				margin:0;
-				padding: 0;
-				border: none;
-				position: absolute;
-				top:0px;
-				right:3px;
-				font-size: 1em;
 
-                mask: url("../img/icon/search.svg") no-repeat center / contain;
-			    -webkit-mask: url("../img/icon/search.svg") no-repeat center / contain;
-			    background:$blu; text-indent: -9000em;&:hover{background: $blu_chiaro;}}
 
+
+				
 			}
-
-
+	            
+	             
+	        
+	        
+	      
+	        
+	        
+	        
+			li:nth-child(2) a i{
+				mask: url("../img/icon/heart.svg") no-repeat center / contain;
+				-webkit-mask: url("../img/icon/heart.svg") no-repeat center / contain;
+				background:$blu ; text-indent: -9000em;&:hover{background: $blu_chiaro;}}
+			li:nth-child(3) a i{ 
+				mask: url("../img/icon/shopping-bag.svg") no-repeat center / contain;
+				-webkit-mask: url("../img/icon/shopping-bag.svg") no-repeat center / contain;
+				background:$blu; text-indent: -9000em;&:hover{background: $blu_chiaro;}}
+		}
+		#lng{
+			right:auto;
+			left:15px;
+	        li{
+	            width: auto;
+	            font-size:1em;
+				position: relative;
+				&.selected{
+					border-bottom:solid 2px $blu;
+				}
+	            a{
+	                 font-size:0.786rem;
+					
+	            }
+				select#language_select{
+					width: 100%;
+					max-width: 160px;
+					padding: 0px 25px 0px 5px;
+					font-size: 1em;
+					font-weight: 600;
+					height: 20px;
+					text-transform: uppercase;
+					-webkit-appearance: none;
+					-moz-appearance: none;
+					appearance: none;
+					background: $grigio_chiaro url("../img/select_chevron.png") no-repeat calc(100% - 5px) 7px/10px auto;
+					border:none;
+					cursor: pointer;
+					margin: 0;
+				}
+	        }
+	       
+	        
+	         
+	        
 			
-
-
-
 			
 		}
-            
-             
-        
-        
-      
-        
-        
-        
-		li:nth-child(2) a i{
-			mask: url("../img/icon/heart.svg") no-repeat center / contain;
-			-webkit-mask: url("../img/icon/heart.svg") no-repeat center / contain;
-			background:$blu ; text-indent: -9000em;&:hover{background: $blu_chiaro;}}
-		li:nth-child(3) a i{ 
-			mask: url("../img/icon/shopping-bag.svg") no-repeat center / contain;
-			-webkit-mask: url("../img/icon/shopping-bag.svg") no-repeat center / contain;
-			background:$blu; text-indent: -9000em;&:hover{background: $blu_chiaro;}}
-	}
-	#lng{
-		right:auto;
-		left:15px;
-        li{
-            width: auto;
-            font-size:1em;
-			position: relative;
-			&.selected{
-				border-bottom:solid 2px $blu;
-			}
-            a{
-                 font-size:0.786rem;
-				
-            }
-			select#language_select{
-				width: 100%;
-				max-width: 160px;
-				padding: 0px 25px 0px 5px;
-				font-size: 1em;
-				font-weight: 600;
-				height: 20px;
-				text-transform: uppercase;
-				-webkit-appearance: none;
-				-moz-appearance: none;
-				appearance: none;
-				background: $grigio_chiaro url("../img/select_chevron.png") no-repeat calc(100% - 5px) 7px/10px auto;
-				border:none;
-				cursor: pointer;
-				margin: 0;
-			}
-        }
-       
-        
-         
-        
-		
 		
 	}
-	
-}
 
 
 .menu_toggle, #tools_mobile, #carrello_mobile, #search_mobile, #wishlist_mobile{
