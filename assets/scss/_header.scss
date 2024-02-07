@@ -67,7 +67,7 @@
 		justify-content: flex-start;
 		max-width: $break-xlarge;
 		width:100%;
-		padding: 0px !important;
+		padding: 0px 15px !important;
 		margin:0 auto;
 		
 		
@@ -96,7 +96,7 @@
 			padding:0;
 			height: 40px;
 			overflow: hidden;
-			margin:15px ;
+			margin:15px 0 ;
 			position: relative;
 			text-align: center;
 			z-index: 11;
@@ -124,41 +124,8 @@
 			display:none;
 		}
 
-		#mainmenu.genders{
 		
-			width:auto;
-			
-			list-style: none;
-			margin: 5px auto;
-			padding: 0;
-			position: relative;
-				
-			display: flex;
-			flex-flow:row nowrap;
-			justify-content: center;
-			text-transform: uppercase;
-			font-weight: 400;	
-			
-			li{ 
-				display: inline-block;
-				text-align: center;
-				width:auto;
-				margin:0 15px -1px ;
-				white-space: nowrap;
-				overflow: hidden;
-				a{
-					display: block;
-					color:$bianco;
-					font-size:1.0em;
-					border-bottom:solid 2px transparent;
-					&:hover, &.active{
-						border-bottom:solid 2px $bianco;
-					}
-				}
-			
-			}
-		}
-		#mainmenu.categories{
+		#main-menu{
 			width:100%;
 			position: relative;
 			list-style: none;
@@ -183,15 +150,9 @@
 					//letter-spacing: 0.9px;
 					padding: 0 0 10px;
 					border-bottom:solid 1px  $blu;
-					&.active {
-						border-bottom:solid 1px $bianco;
-						
-					}
-					&.sales{
-						color:$sfondo;
-					}
+					
 				}
-				ul.sub_menu{
+				div.dropdown-menu{
 					display: none;
 					width:138px;
 					list-style: none;
