@@ -3,6 +3,24 @@
 
 $( document ).ready(function() {
 
+
+	/*********************
+	dimensione viewport
+	*********************/ 	
+	
+	function break_width(){
+		var bwidth=$(window).width();
+	return(bwidth);
+	}
+	
+	function w_height(){
+		var wheigh=($(window).height());
+	return(wheigh);
+	}
+
+
+
+
 	//alert('pippo');
 	$('#catalogo-dropdown-toggle').mouseenter(function(){
 			$('.dropdown-menu').stop().slideDown();
@@ -11,6 +29,18 @@ $( document ).ready(function() {
 		$('.dropdown-menu').mouseleave(function(){
 			$(this).slideUp();
 		});
+
+
+	/*********************
+	gestione menu mobile
+	*********************/ 
+	
+	if (break_width() < 1080)
+	$('#menu-toggle').click(function(){
+		$(this).toggleClass('active').find('i').toggleClass('la-bars').toggleClass('la-times');
+		$('#main-menu').fadeToggle()
+	});
+		
 
 
 
