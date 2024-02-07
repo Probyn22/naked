@@ -304,23 +304,25 @@
 		}
 		#main-menu{
 			background: rgba($bianco, 0.8);
-			position: fixed;
+			
 			margin: 10px 0 0;
 			padding: 0;
 			display: none !important;
-			flex-flow:row wrap;
-			justify-content: flex-start;
-			align-items: flex-start;	
+			
 			text-transform: uppercase;
+			position: fixed;
 			left: 0;
 			overflow: hidden;
 			&.act{
 				display: flex !important;
+				flex-flow:row wrap;
+				justify-content: flex-start;
+				align-items: flex-start;	
 			}
 			&:before{
 				content: '';
 				display: block;
-				position: fixed;
+				position: absolute;
 				top:0;
 				left: 0;
 				width:calc(100% - 30px);
