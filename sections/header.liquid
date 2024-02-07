@@ -61,7 +61,7 @@
 			    {%- endcomment -%}
 			    {%- assign primary_link_list = linklists[section.settings.primary_link_list] -%}
 			    {%- unless primary_link_list == blank -%}
-			    <ul class="navbar-nav mr-auto">
+			    <ul id="main-menu" class="navbar-nav mr-auto">
 			      {%- for link in primary_link_list.links -%}
 			      {%- assign child_link_list_handle = link.title | handle -%}
 			        {%- assign child_link_list = linklists[child_link_list_handle] -%}
@@ -93,7 +93,7 @@
 				    accesso (a seconda che gli account cliente siano abilitati e che il cliente abbia 
 				    effettuato l'accesso o meno) e un collegamento al carrello.
 				    {%- endcomment -%}
-				    <ul class="navbar-nav">
+				    <ul id="tools" class="navbar-nav">
 				      <li class="nav-item">
 				        <a class="nav-link" href="/search">Cerca</a>
 				      </li>

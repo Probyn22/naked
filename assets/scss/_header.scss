@@ -96,7 +96,7 @@
 			padding:0;
 			height: 40px;
 			overflow: hidden;
-			margin:15px auto;
+			margin:15px ;
 			position: relative;
 			text-align: center;
 			z-index: 11;
@@ -119,6 +119,11 @@
 				}
 			}
 		}
+
+		#menu-toggle{
+			display:none;
+		}
+
 		#mainmenu.genders{
 		
 			width:auto;
