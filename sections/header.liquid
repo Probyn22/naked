@@ -46,7 +46,42 @@
 				{%- comment -%}
 				    Elemento principale del brand posizionato in alto a sinistra nella barra di navigazione.
 					<a class="navbar-brand" href="/">{{ shop.name | escape }}</a>
+					
+					creo il menu per il mobile
 				{%- endcomment -%}
+				{%- comment -%}
+					creo il menu per il mobile
+				{%- endcomment -%}
+				<a href="javascript:;" id="menu-toggle"><i class="las la-bars"></i></a>
+				<div id="menu_mobile">
+					{%- assign primary_link_list = linklists[section.settings.primary_link_list] -%}
+				    {%- unless primary_link_list == blank -%}
+				    <ul class="navbar-nav mr-auto">
+				      {%- for link in primary_link_list.links -%}
+				      {%- assign child_link_list_handle = link.title | handle -%}
+				        {%- assign child_link_list = linklists[child_link_list_handle] -%}
+				        {%- if child_link_list and child_link_list.links.size > 0 -%}
+				          {%- assign has_child_link_list = true %}
+				        {%- else- %}
+				          {%- assign has_child_link_list = false %}
+				        {%- endif -%}
+				        <li class="nav-item {% if link.active %}active{% endif %} {% if has_child_link_list %}dropdown{% endif %}">
+				          <a href="{{ link.url }}" class="nav-link {% if has_child_link_list %}dropdown-toggle{%  endif %} %}" {% if has_child_link_list %}id="{{ child_link_list_handle }}-dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"{% endif %}>
+				            {{ link.title | escape }} {% if link.active %}<span class="sr-only">(current)</span>{% endif %}
+				          </a>
+				          {%- if has_child_link_list -%}
+				            <div class="dropdown-menu" aria-labelledby="{{ child_link_list_handle }}-dropdown-toggle">
+				              {%- for child_link in child_link_list.links -%}
+				                <a href="{{ child_link.url }}" class="dropdown-item">{{ child_link.title | escape }}</a>
+				              {%- endfor -%}
+				            </div>
+				          {%- endif -%}
+				        </li>
+				      {%- endfor -%}
+				    </ul>
+	    			{%- endunless -%}
+				</div>
+
 				
 			</div>
 			<div class="col-sm-12 col-md-6">
