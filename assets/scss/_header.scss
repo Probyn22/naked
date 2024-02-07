@@ -277,7 +277,6 @@
 			margin: 0;
 			z-index: 30;
 			overflow: hidden;
-			
 		}
 		#prehead{
 			font-size: 0.7em;
@@ -286,7 +285,6 @@
 		#logo{
 			position:relative;
 			top:1px;
-			
 			margin:15px auto;
 			max-width:120px !important;
 			height: 100vh;
@@ -304,31 +302,31 @@
 			top:0;
 			left: 0;
 		}
-		
-		
-	}
-	#main-menu{
-		background: rgba($bianco, 0.8);
-		position: fixed;
-		margin: 10px 0 0;
-		padding: 0;
-		display: none;
-		flex-flow:row wrap;
-		justify-content: flex-start;
-		align-items: center;	
-		text-transform: uppercase;
-		&.act{
-			display: flex;
-		}
-		li{
-			background: $bianco;
-			width: calc(100% - 30px);
-			margin: 0;
-			padding: 15px;
-			border-bottom: solid 1px $grigio_chiaro;
-		}
+		#main-menu{
+			background: rgba($bianco, 0.8);
+			position: fixed;
+			margin: 10px 0 0;
+			padding: 0;
+			display: none !important;
+			flex-flow:row wrap;
+			justify-content: flex-start;
+			align-items: center;	
+			text-transform: uppercase;
+			&.act{
+				display: flex !important;
+			}
+			li{
+				background: $bianco;
+				width: calc(100% - 30px);
+				margin: 0;
+				padding: 15px;
+				border-bottom: solid 1px $grigio_chiaro;
+			}
 
+		}
+		
 	}
+	
 	
 		
 		
