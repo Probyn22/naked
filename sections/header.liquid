@@ -70,10 +70,13 @@
 			        {%- else- %}
 			          {%- assign has_child_link_list = false %}
 			        {%- endif -%}
-			        <li class="nav-item {% if link.active %}active{% endif %} {% if has_child_link_list %}dropdown{% endif %}">
-			          <a href="{{ link.url }}" class="nav-link {% if has_child_link_list %}dropdown-toggle{%  endif %} %}" {% if has_child_link_list %}id="{{ child_link_list_handle }}-dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"{% endif %}>
+			        <li class="nav-item {% if link.active %}active{% endif %} ">
+			          <a href="{{ link.url }}" class="nav-link" >
 			            {{ link.title | escape }} {% if link.active %}<span class="sr-only">(current)</span>{% endif %}
 			          </a>
+
+			          {% if has_child_link_list %}<span class="dropdown-toggle" id="{{ child_link_list_handle }}-dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="las la-angle-down"></i></span>{% endif %}
+
 			          {%- if has_child_link_list -%}
 			            <div class="dropdown-menu" aria-labelledby="{{ child_link_list_handle }}-dropdown-toggle">
 			              {%- for child_link in child_link_list.links -%}
