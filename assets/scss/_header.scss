@@ -225,19 +225,25 @@
 			z-index: 30;
 			
 			li{
-				width:21px;
+				min-width:21px;
 				height: 21px;
 				margin:0 0 0 10px;
+				overflow: hidden;
 				a{
 					display: block;
 					width:100%;
 					height: 100%;
 					line-height: 21px;
 					text-align: center;
-					font-size:1.2em;
+					font-size:0.9em;
 					color:$blu;
 					position: relative;
 					text-transform: uppercase;
+					i{
+						display:inline-block;
+						font-size: 1.2em;
+
+					}
 					&:hover, &.active{
 						color:$blu_chiaro;
 					}
