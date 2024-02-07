@@ -38,7 +38,18 @@ $( document ).ready(function() {
 	if (break_width() < 1080)
 	$('#menu-toggle').click(function(){
 		$(this).toggleClass('active').find('i').toggleClass('la-bars').toggleClass('la-times');
-		$('#main-menu').toggleClass('act');
+
+			function w_height_mob(){
+				var wheigh=($(window).height());
+				return(wheigh);
+			}
+
+			var header_m_height=($('#shopify-section-header').height());
+			var menu_mobile_h=parseInt(w_height_mob() - header_m_height);
+			$('#main-menu').css({
+				"height": menu_mobile_h+"px",
+				"top":header_m_height+"px" 
+			}).toggleClass('act');
 	});
 		
 
