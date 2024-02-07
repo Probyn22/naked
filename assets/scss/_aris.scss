@@ -1,0 +1,639 @@
+#aris{
+	margin:0 auto 0px;
+	padding: 50px 0;
+	background: $bianco;
+	width:100%;
+	border-bottom:solid 1px $grigio;
+	
+	.row{
+	//	align-content: center
+	}
+	.col-md-12{
+		margin-bottom: 30px;
+		
+	}
+	
+	
+	//sidebar
+	/*.side{
+		list-style: none;
+		position: sticky;
+		top:200px;
+		padding: 30px 30px 30px 0;
+		list-style: none;
+		border-right: solid 1px $blu;
+		li{
+			
+			a{
+				display:block;
+				width:100%;
+				overflow: hidden;
+				font-size:0.9em;
+				color: $blu;
+				padding-bottom: 5px;
+				margin-bottom: 15px;
+				&:hover{
+					border-bottom-color:$blu;
+					color:$blu;
+				
+				}
+				&.current{
+					color:$blu;
+				
+					
+				}
+			}
+			
+		}
+		@media screen and (max-width:$break-xlarge_plus){
+			padding: 10px 0;
+			top:150px;
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: center;
+			border-bottom:solid 5px $grigio_chiaro;
+			li{ 
+				display: inline-block;
+				margin: 0 !important; 
+				padding: 0;
+				a{
+					font-size: 0.9em;
+					padding: 5px 10px 5px 0;
+					margin: 0;
+				}
+			}	
+		}
+	}*/
+	.side{
+		list-style: circle;
+		position: sticky;
+		top:200px;
+		margin:0;
+		padding: 0 15px 0 0 ;
+		border-right: solid 1px $blu;
+		li{
+			a{
+				display:block;
+				width:100%;
+				overflow: hidden;
+				border-bottom:dotted 1px $grigio;
+				font-size:1.1em;
+				font-weight:300;
+				color: $grigio_scuro;
+				padding-bottom: 5px;
+				margin-bottom: 15px;
+				&:hover{
+					border-bottom-color:$blu;
+					color:$blu;
+				
+				}
+				&.current{
+					color:$blu;
+				
+					
+				}
+			}
+			
+		}
+		
+	}
+	
+	h2{
+		width:100%;
+		
+		font-weight: 100;
+		text-transform: uppercase;
+	}
+	form{
+		width:100% !important;
+		max-width: 960px;
+		display: flex;
+		flex-flow: row wrap;
+		text-transform: uppercase;
+		margin: 0 auto ;
+		padding-bottom: 80px;
+		position: relative;
+	
+		
+		
+		
+		fieldset{
+			margin: 0 30px 20px 0 !important;
+			width:100%;
+			
+			max-width: 300px;
+			&:last-of-type{
+				margin-right: 0;
+				
+			}
+			&.mod_profile{
+				width:calc((100% / 3) - 30px);
+				h4{padding: 30px 0;}
+			}
+			h4{
+				font-size: 1em;
+			}
+			
+		}
+		label{
+			display:block;
+			width:100%;
+			max-width: 300px;
+			margin:0 auto 20px;
+			font-size: 0.7em;
+			position: relative;
+			cursor: pointer;
+			&.check{
+				padding: 0 20px;
+			}
+			input{
+				display: block;
+				width:calc( 100% + 1px);
+				margin: 0 auto;
+				font-size: 1.3em;
+				
+				&[type=checkbox]{
+					position: absolute;
+					top:3px;
+					left: 0;
+					width:10px;
+				}
+				
+			}
+			select{
+				font-size: 1.3em;
+			
+			}
+		/*	select{
+				display: block;
+				font-size: 1.3em;
+				background-color:transparent;
+				text-transform: capitalize !important;
+				max-width:none !important;
+				border-radius: 0 !important;
+				}
+			span{
+				display: block;
+				width:12px;
+				height: 12px;
+				background: $bianco;
+				border:solid 1px $grigio;
+				position: absolute;
+				top:0;
+				left: 0;
+
+			}*/
+			/*input:checked ~ span {
+						  background-color: $blu;
+						  border-color:$blu;		
+						}*/
+		}
+		/*button{
+		display: block;
+		width:200px;
+		font-size: 0.9em;
+		text-transform: uppercase;
+		margin: 10px auto;
+		padding: 10px 15px 5px;
+		position: absolute;
+		bottom:0;
+			left: 50%;
+		transform: translateX(-50%);
+		font-weight: 200;
+		text-align: center;
+		background: $bianco;
+		color:$blu;
+		border-radius: 0 !important;	
+		span{
+			font-size: 1em;
+			position: absolute;
+			top:9px;
+			right: 15px;
+			
+		}
+			&:hover{
+				font-weight: 600;
+			}
+		}*/
+		.form_button{
+			width:100%;
+			text-align: center;
+			
+			position: relative;
+			padding: 30px 0 0;
+			button{
+				position: absolute;
+				bottom:0;
+				left: 50%;
+				transform: translateX(-50%);
+				white-space: nowrap;
+			}
+		}
+		button{
+				
+			display: inline-block;
+			width: auto;
+			margin:0 auto;
+			padding: 5px 15px;
+			border-radius:5px;
+			background: $blu ;
+			color:$bianco;
+			font-size:0.857em;
+			font-weight: 600;
+			border:solid 1px $blu;
+			text-transform: uppercase;
+			box-shadow: 0 0 2px $blu;
+			}
+	}
+	
+	
+
+	//elenco ordini
+	table#orders{
+		width:100%;
+		border-collapse:collapse;
+		
+		text-align: center;	
+		th{
+				background: $bianco;
+				padding: 10px 15px;
+				border-bottom: solid 1px $blu;
+			
+		}
+		td{
+			padding: 10px 15px;
+			border-bottom: solid 1px $blu;
+			a{
+				color:$blu;
+				font-weight:600;
+			}
+		}
+		tr:last-child{
+			td{
+				border-bottom:none;	
+			}
+		}
+	}
+	
+	
+	
+	#order_detail{
+	display: flex;
+	flex-flow: row wrap;
+		justify-content:space-between;
+	background: rgba($bianco, 0.9);
+	position: relative;
+	width:100%;
+	padding: 0;
+	color: $blu;
+	z-index: 10000;
+	overflow:hidden;
+	
+	.wrapper{
+		width:100%;
+		height: 100%;
+		max-height: 300px;
+		overflow-x: hidden;
+		overflow-y: auto;
+		margin-bottom: 20px;
+		border-bottom: solid 1px $blu;
+		.item{
+			width: 100%;
+			display: flex;
+			flex-flow: row wrap;
+			margin: 0 0 10px;
+			border-bottom: solid 1px $grigio;
+			&:last-child{border-bottom: none}
+			img{
+				width:70px;
+				height: auto
+			}
+			.txt{
+				width: 50%;
+				margin: 0 0 0 10px;
+				text-transform: uppercase;
+				font-size:0.7em;
+				position: relative;
+				span{
+					display: block;
+					width: 100%;
+					margin: 0 0 5px 0;
+					position: relative;
+				}
+				.elimina{
+						position: absolute;
+						bottom:0;
+						margin: 0;
+					}
+			}
+		}
+	}
+		#info_sped, #riepilogo  {
+			width:48%;
+			margin: 0 0 20px;
+		}
+	h4, h3{
+		font-size: 1.1em;
+		display: block;
+		width:100%;
+		position: relative;
+		text-transform: uppercase;
+		margin: 0 0 20px 0;
+		padding: 10px 0;
+	}
+	h3{
+		font-size: 1.3em;
+		margin: 11px 0;
+		position: relative;
+		overflow: hidden;
+		strong{
+			position: relative;
+			float: right;
+		}
+	}	
+	p{
+		font-size: 0.9em;
+		padding: 0 0 5px;
+		margin: 0 0 5px;
+		border-bottom:solid 1px $blu;
+		text-transform: uppercase;
+		position: relative;
+		overflow: hidden;
+		strong{
+			position: relative;
+			float: right;
+		}
+		
+		&.stato{
+			text-align: center;
+			font-weight:600;
+			border-bottom:none;
+			&:last-of-type{
+			border-bottom:none;
+			}
+		}
+	}	
+	
+}
+	//coupon
+	
+	#coupon_list{
+		width:100%;
+		margin:50px 0 0;
+		padding: 0;
+		list-style: none;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: flex-start;
+		align-content: flex-start;
+		align-items: center;
+		li{
+			margin: 10px 20px 10px 0;
+			border:solid 1px $blu;
+			border-radius:5px;
+			max-width: 200px;
+			padding: 15px;
+			text-align: center;
+			
+			
+			h3{
+				font-size: 0.9em;
+				text-transform: lowercase;
+				color: $blu;
+				strong{
+					font-size: 1.3em;
+					display: block;
+					margin: 10px 0;
+				color:nero;
+				text-transform: uppercase;	
+			}
+			}
+			h4{
+				font-size: 1em;
+				text-transform: lowercase;
+				color: $blu;
+				strong{
+				color:nero;
+				text-transform: uppercase;		
+			}
+			}
+			h5{
+				font-size: 0.9em;
+				text-transform: lowercase;
+				color: $blu;
+				strong{
+				color:nero;
+				text-transform: uppercase;		
+				}
+			}
+		}
+	}
+	
+	//settings
+	#settings{
+		width:100%;
+		max-width: 930px;
+		
+		margin:0 auto;
+		padding: 0;
+		list-style: none;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: flex-start;
+		align-content: center;
+		align-items: stretch;
+		
+		li{
+			margin: 10px 15px 10px 0;
+			width:calc((100% / 3) - 30px);
+			max-width: 300px;
+			padding: 15px 15px 15px 0;
+			text-align: center;
+			border-right:solid 1px $blu;
+			&:last-child{
+				border-right:none;
+				margin: 10px 0px ;
+				padding: 15px  0;
+			}
+			h4{
+				white-space: nowrap;
+			}
+			form{
+				
+				
+				height: 100%;
+				text-align: center;
+				margin: 0;
+				fieldset{
+					margin: 0 auto !important;
+					
+				}
+				
+			}
+			
+		}
+	}
+	
+	//tabella wishlist
+	table#wishlist{
+		width:100%;
+		border-collapse:collapse;
+		
+		text-align: center;	
+		th{
+				background: $bianco;
+				padding: 10px 15px;
+				border-bottom: solid 1px $blu;
+			
+		}
+		td{
+			padding: 10px 15px;
+			border-bottom: solid 1px $blu;
+			a{
+				display: block;
+				border:solid 1px $blu;
+				border-radius:5px;
+				padding:10px 0px;
+				background:$bianco;
+				margin: 0 ;
+				text-align: center;
+				text-transform: uppercase;
+				font-size:1em;
+				font-weight: 600;
+			}
+			img{
+				width:100%;
+				height: auto;
+				max-width: 80px;
+			}
+		}
+		tr:last-child{
+			td{
+				border-bottom:none;	
+			}
+		}
+	}
+	
+	
+	
+	@media screen and (max-width:$break-large-plus){
+		margin-top:0;
+		padding: 0;
+		.side{
+			border:solid 1px $grigio;
+			background: $sfondo;
+			list-style: none;
+			padding: 0 10px;
+			display: flex;
+			flex-flow: row wrap;
+			li{
+				width:50%;
+				margin:0;
+				padding: 0;
+				a{margin:0;
+				padding: 10px;}
+				&:last-child{
+					a{
+						border:none;
+					}
+				}
+			}
+		}
+		form{
+			margin: 0 auto;
+			padding-bottom: 20px;	
+			fieldset{
+				margin: 0 0 20px;
+				max-width: none;
+				.check{
+					padding-left:15px;
+				}
+			}
+		}
+	
+	
+		#orders{
+			font-size:0.7em;
+			td, th{
+				padding:10px 0 !important;
+				width:calc( 100%/ 6);
+			}
+		}
+		#order_detail{
+			#info_sped, #riepilogo  {
+				width:100%;
+				margin: 0 0 20px;
+			}
+		}
+		#coupon_list{
+			li{
+				width: 100% !important;
+				max-width: none !important;
+				margin: 0 0 50px ;
+			}
+		}
+		#settings{
+			form{
+				padding-bottom: 30px;
+				
+			}
+			li{
+				width: 100%;
+				margin:  0 0 20px;
+				max-width: none;
+				padding:  0;
+				text-align: center;
+				border-right: none;
+			}
+		}
+		table#wishlist{
+			*{display: block}
+			tr{
+				width:100%;
+				overflow:hidden;
+				text-align: right;
+				position:relative; 
+				border-bottom:solid 1px $blu;
+				padding:10px 0;
+				&:first-child{
+					display: none;
+				}
+				&:last-child{
+					border-bottom:0;
+				}
+				td{
+					width:50% !important;
+					margin:0 0 0 auto;
+					border:none;
+					text-align: left;
+					&:first-child{
+						position:absolute;
+						top:0;
+						left: 0;
+						img{
+							width:100%;
+							height: 100%;
+							max-width: none;
+							object-fit: contain;
+						}
+					}
+					a{
+						margin-bottom: 15px;
+					}
+				} 
+			}
+
+		}
+	
+	}
+	
+	@media screen and (max-width:$break-normal){
+		margin-top:58px; 
+		form{
+		fieldset{
+			width:100% !important;
+			margin:0 0 20px !important;
+		}
+		}	
+	}
+}

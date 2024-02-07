@@ -1,0 +1,225 @@
+section#giftcard{
+	margin:0 auto 50px;
+	padding: 0;
+	background: $bianco;
+	width:100%;
+	position: relative;
+	
+	
+	
+	.content, .thankyou{
+		align-content:center;
+		align-items:center;
+		h2{
+			color:$blu;
+			text-transform: uppercase;
+			font-weight: 400;
+			font-size:2.813em;
+			text-align: center;
+		}
+		
+		.text{
+			font-size: 1em;
+			text-align: center;
+			ul{
+				margin:0;
+				padding:0;
+				list-style: none; 
+			}
+		}
+
+
+		.imgh{
+			width:100%;
+			overflow: hidden; 
+			position: relative;
+			max-height: 500px;
+			margin: 40px 0;
+			img{width:100%;
+			height:auto;}
+		}
+		.img_container{
+			list-style: none;
+			margin:0 0 30px;
+			padding:0;
+			width:100%;
+			overflow: hidden;
+			display: flex;
+			flex-flow: row;
+			justify-content: space-between;
+			align-content: flex-start;
+			align-items: flex-start;
+			
+			&:before{
+				content: '';
+				display: block;
+				width:2px;
+				height: 100%;
+				max-height: 427px;
+				position: absolute;
+				top:0;
+				left: 50%;
+				transform: translateX(-50%);
+				background: $grigio_chiaro2;
+			}
+			li{
+				margin:0;
+				padding:0;
+				width:calc(50% - 60px);
+			}
+			
+			
+		}
+		
+	}
+
+
+	form{
+		width:100%;
+
+		position:relative;
+		overflow: hidden;
+		border:solid 1px $blu;
+		border-radius:35px;
+		padding: 20px 40px;
+		margin:40px 0;
+		text-align: center;
+		fieldset{
+			width: 100%;
+			text-align: left;
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-between;
+			align-content:center;
+			align-items:center;
+
+			label{
+				width:calc(50% - 10px);
+				overflow: hidden;
+				padding: 0 5px;
+				margin: 0 0 15px;
+				&[for="payment_method"],
+				&[for="message"]{
+				 width:100%;
+				 float:none;	
+				}
+				
+				input, textarea{
+					display: block;
+					width:100%;
+					margin: 5px 0 0 0;
+					height: 30px;
+					
+				}
+				textarea{
+					height: 55px;
+				}
+				input[type="checkbox"]{
+					display:inline-block;
+					margin:0 5px 0 0;
+					width: auto;
+				}
+				ul#payment_method{
+					width: 100%;
+					text-align: left;
+					display: flex;
+					flex-flow: row wrap;
+					justify-content: space-between;
+					list-style: none;
+					margin: 0;
+					padding:0;
+					li{
+						width: auto;
+						margin: 0 15px 10px 0;
+					}
+				}	
+			}
+		}
+
+		button{
+			width:auto;
+			padding:10px 20px;
+			margin: 0 auto;
+			border-color:$blu;
+			font-weight: 600;
+			font-size: 1em;
+			line-height: 1.12em;
+			text-transform: uppercase;
+			&:hover{
+				background:$blu;
+				color:$bianco;
+				border-color:$blu;
+			}
+		}
+	
+	}
+	.thankyou{
+		#msg{
+			width:100%;
+			max-width: 500px;
+			border:solid 1px $blu;
+			border-radius:35px;
+			padding: 20px 40px;
+			margin:40px auto;
+			text-align: center;
+			h3{
+				color:$blu;
+			}
+			h6{
+				text-transform: uppercase;
+				font-size:0.9em;
+			}
+			.btn{
+				width:auto;
+				padding:10px 20px;
+				margin: 0 auto;
+				border-color:$blu;
+				font-weight: 600;
+				font-size: 1em;
+				line-height: 1.12em;
+				text-transform: uppercase; 
+				&:hover{
+				background:$blu;
+				color:$bianco;
+				border-color:$blu;
+			}
+			}
+		}
+	}
+@media screen and (max-width:$break-large){
+		#breadcrumb{
+			top:142px;
+		}
+		
+	h2{
+		margin:80px 0 0;
+		font-size:1.5em !important;
+	}
+
+	.col-md-6{
+		max-width:none !important;
+		-ms-flex: 0 0 100% !important;
+		flex: 0 0 100% !important;
+		max-width: 100% !important;
+	}
+
+	.imgh{
+		max-width: 500px;
+		margin: 40px auto 0 !important;
+	}
+	form{
+		padding:35px;
+		max-width: 500px;
+		margin: 40px auto 40px !important;
+		label{
+			width: 100% !important;
+			select{
+				max-width:none !important;
+			}
+		}
+
+	}
+		
+}	
+	
+}

@@ -1,0 +1,303 @@
+/* CSS Document */
+
+
+
+
+#newsletter{
+	width:100%;
+	background: $blu;
+	color:$bianco;
+	text-align: center;
+	padding: 30px 15px;
+	.content{
+
+		max-width:500px;
+		margin:0 auto;
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+		
+		.h4{
+			max-width: 260px;
+			color:$bianco ;
+			text-align: right;
+			margin: 0 20px 0 0;
+			text-transform: uppercase;
+			font-size: 1em
+
+		}
+		p{
+			margin:0;
+			a:hover{
+				border-color:$bianco;
+				text-decoration: none !important;
+			}
+		}
+	
+	}
+}
+
+
+footer{
+	position: relative;
+	margin:0 auto;
+	padding: 15px 0 0;
+	background: $sfondo;
+	overflow: hidden;
+	z-index: 0;
+	width: 100%;
+	font-size:1em;
+	.container{
+		max-width: $break-xlarge_plus;
+		margin:0 auto;
+		padding: 0;
+	}
+	.row{
+		margin: 0;
+		padding: 0;
+		.col{
+			margin: 0;
+			padding: 0;
+		}
+		#lnk_footer{
+			width:100%;
+			display: flex;
+			flex-flow: row;
+			justify-content: space-between;
+			list-style: none;
+			margin:0 0 10px 0px;
+			padding: 0;
+			text-transform: capitalize;
+			text-align: left;
+			li{
+				width:calc(100% / 5 );
+				margin: 0 0px 5px 0;
+				&:last-child{
+					max-width:100px;
+				}
+				.h4{
+					text-transform: uppercase;
+					width: 100%;
+					text-align: left;
+					margin:10px 0px ;
+					font-weight: 600;
+					color:$blu;
+					font-size: 0.857rem;
+				}
+				ul{
+					width: 100%;
+					padding: 0;
+					margin: 0;
+					list-style: none;
+					li{
+						width: 100%;
+						margin:0 0  5px 0;
+						font-size: 0.757rem;
+						a{
+							&:hover{
+									color:$grigio;
+								}
+						}
+					}
+
+
+
+
+				}
+				
+				
+				
+			}
+			
+			
+		}
+		.disclaimer{
+			font-size: 0.7rem;
+			padding-top: 8px; 
+		}
+		
+		.loghi{
+			width: 100%;
+			margin:20px 0;
+			padding: 0;
+			display: flex;
+			flex-flow: row;
+			justify-content: space-between;
+			align-content: center;
+			list-style: none;
+			li{
+				width:75%;
+				&:first-child{
+				max-width: 100px;
+				}
+				img{
+					width:100%;
+					height: auto;
+					vertical-align: middle;
+				}
+			}
+			
+			
+		}
+		
+		
+		
+		
+		
+	
+		
+	}
+	#sub-footer{
+		display: block;
+		width: 100%;
+		padding:5px 15px;
+		background:$blu;
+		text-align:center;
+		color:$bianco;
+		a{
+			color:$bianco;
+			text-transform: uppercase;
+			font-size: 0.8em;
+			font-weight: 600;
+		 }
+	}
+
+	
+}
+
+
+
+@media screen and (max-width:$break-large){
+	#newsletter{
+	width:100%;
+	background: $blu;
+	color:$bianco;
+	text-align: center;
+	padding: 30px 15px;
+	.content{
+		width:100%;
+		margin:0 auto;
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+		
+		.h4{
+			width: 100%;
+			max-width: none;
+			color:$bianco ;
+			text-align: center;
+			margin: 0 0 20px ;
+		}
+		p{
+			margin:0 auto;
+			a:hover{
+				border-color:$bianco;
+				text-decoration: none !important;
+			}
+		}
+	
+	}
+	}
+	footer{
+	.row{
+		.col{
+			width:100%;
+			max-width: 100%;
+			flex:0 0 100%;	
+		}
+		#lnk_footer{
+			width:100% !important;
+			display: flex !important;
+			flex-flow: column !important;
+			justify-content: center !important;
+			text-align: center !important;
+			li{
+				width:100% !important;
+				margin: 0 0px 5px 0 !important;
+				border-bottom: solid 1px $grigio !important;
+				&:last-child{max-width: none !important} 
+				.h4{
+					text-transform: uppercase;
+					width: 100%;
+					text-align: center;
+					margin:10px 0px ;
+					font-weight: 600;
+					color:$blu;
+					font-size: 1rem;
+					background: transparent;
+					cursor: pointer;
+				}
+				ul{
+					width: 100%;
+					padding: 0;
+					margin: 0;
+					list-style: none;
+					li{
+						width: 100%;
+						margin:0 0  5px 0;
+						font-size: 0.9rem;
+						border-bottom: none !important;
+						a{
+							display: inline-block;
+							padding:5px 15px;
+							&:hover{
+									color:$blu_chiaro;
+								}
+						}
+					}
+
+
+
+
+				}
+				
+				
+				
+			}
+			
+			
+		}
+		.disclaimer{
+			font-size: 0.857rem;
+			padding: 0 15px;
+		}
+		
+		.loghi{
+			width: 100%;
+			max-width: 350px;
+			margin:20px auto;
+			padding: 0;
+			display: flex;
+			flex-flow: row;
+			justify-content: space-between;
+			align-content: center;
+			list-style: none;
+			li{
+				width:75%;
+				&:first-child{
+				max-width: 100px;
+				}
+				img{
+					width:100%;
+					height: auto;
+					vertical-align: middle;
+				}
+			}
+			
+			
+		}
+		
+		
+		
+		
+		
+	
+		
+	}
+	
+}	
+}
+
+
+	
+

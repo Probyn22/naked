@@ -1,0 +1,725 @@
+@mixin scrollbar($color, $bgcolor, $width, $radius){
+	scrollbar-width: thin !important;
+  	scrollbar-color: $color $bgcolor;
+
+	&::-webkit-scrollbar {
+	  width: $width;
+	}
+	&::-webkit-scrollbar-track {
+	  background: $bgcolor;
+	}
+	&::-webkit-scrollbar-thumb {
+	  background-color: $color ;
+	  border-radius: $radius;
+	  border: 1px solid $bgcolor;
+	}
+	&::-webkit-resizer {
+	  width: $width;
+	  background: $bgcolor;	
+	}
+}
+
+@mixin icon_accordion{
+	&:after{
+		display:block;
+		content: "\45";
+	//	background: url("../img/arrow.gif") no-repeat bottom left;
+		width: 15px;
+		height: 15px;
+		position: absolute;
+		top:0;
+		right:0;
+		transform: rotate(90deg);
+		font-family: 'ElegantIcons';
+		speak: none;
+		font-style: normal;
+		font-weight: 400;
+		font-variant: normal;
+		text-transform: none;
+		line-height: 6px;
+		overflow: hidden;
+	}
+}
+
+@mixin item{
+	margin:0;
+	padding:0 15px;	
+	cursor:pointer;
+	.add_wl{
+		display: block;
+		width:25px;
+		color:$blu;
+		font-size: 1.3em;
+		text-align: right;
+		margin: 0 0 0 auto;
+		position: absolute;
+		top: 10px;
+		right: 30px;
+		z-index: 100;
+		i{
+			display: inline-block;
+			width:25px;
+			height: 25px;
+			text-align: center;
+			color:$blu;
+			mask: url("../img/icon/heart.svg") no-repeat center / contain;
+			-webkit-mask: url("../img/icon/heart.svg") no-repeat center / contain;
+			background:$blu; 
+			text-indent: -9000em;
+			
+			&:hover{background: $blu_chiaro;}
+		}
+	
+	}
+	.quickview{
+		display: block;
+		width:25px;
+		color:$blu;
+		font-size: 1.3em;
+		text-align: right;
+		margin: 0 0 0 auto;
+		position: absolute;
+		top: 60px;
+		right: 40px;
+		z-index: 100;
+	}
+	
+	.tag{
+		position:absolute;
+		top:0;
+		left: 15px;
+		z-index: 100;
+		font-size:  0.8em;
+		font-weight: 600;
+		display: flex;
+		justify-content: flex-start;
+		flex-flow:row ;
+		max-width: 50%;
+		margin: 0;
+		padding:0;
+
+		li{
+			display: inline-flex;
+			width:auto;
+			padding: 3px 5px;
+			margin: 0 5px 5px 0;
+			white-space: nowrap;
+			text-transform: uppercase;
+			color:$bianco;
+			background: $grigio;
+			border-bottom-right-radius: 10px;
+		}
+		.last_arrive{
+			background:$nero;
+			color:$bianco;
+		}
+		.sale {
+			background: $blu;
+			color:$bianco;
+		}
+	}
+	
+	
+	.frame{
+		display: block;
+		overflow: hidden;	
+		padding:0 0px 5px;
+		text-align: left;
+			
+		position: relative;
+		transition: .5s;
+		transition-delay:.15s;
+		
+		
+		
+		
+		}
+		
+	   
+		.box_img{
+			border:solid 1px $grigio_chiaro;
+			width:100%;
+			height: 100%;
+			//max-height: 400px;
+			margin:0 auto ;
+			padding: 0px;
+			overflow: hidden;
+			position: relative;
+			
+			
+		}
+		.gal_img{
+			
+			width:100%;
+			height: 100%;
+			overflow: hidden;
+			.swiper-slide{
+				text-align: center;
+				background:rgba($sfondo, 0.3);
+			}
+			
+			img{
+				width:auto;
+				height: 100%;
+				max-height: 300px;
+				margin: 30px auto;
+				mix-blend-mode: multiply;
+				object-fit: contain; 
+			}
+		}
+		.cnt{
+			text-transform: lowercase; 
+			margin:0 0 10px; 
+			padding: 15px 0 0; 
+			text-align: left; 
+			font-size: 1.1em;
+			text-decoration:none !important;
+			
+			span{
+				display:block;
+			}
+			.marca{
+				display: block;
+				width:100%;
+				font-weight: 500;
+				letter-spacing: 0;
+				font-weight: 500;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				margin: 0 0 5px;
+				text-transform: uppercase;
+				
+			}
+			.taglia_catalogo{
+				display: block;
+				width:100%;
+				margin:0 ;	
+				font-size:0.9em;
+				text-transform: uppercase;
+				line-height: 1.2em;
+				height: 2.5em;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				margin: 0 0 5px;
+				font-weight: 300;
+				opacity: 0;
+				i{
+					display:block;
+					font-style: normal;
+				}
+
+			}
+			
+			.prodotto{
+				display: block;
+				width:100%;
+				margin:0 ;	
+				font-size:1em;
+				line-height: 1.2em;
+				height: 2.5em;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				margin: 0 0 5px
+			}
+			.prezzo, .prezzo_nd{
+			position:relative;
+			bottom:0;
+			left: 0;
+			width: 100%;
+			padding:0;
+			margin: 0 0 15px;
+			font-size:1em;
+			min-height: 2.5em;
+			font-weight: 600;	
+			span{
+				display: inline-block;
+				position: relative;
+				width:auto;
+				margin: 0 5px 0 0;
+				
+				@media screen and (max-width:$break-normal ){
+					display: block;
+					margin: 0 0 5px 0;
+					height: 1em;
+				}
+				
+			}
+			del{
+				color:$grigio;
+			}
+			i{
+				color:$blu;
+				font-weight: 100;
+				font-style: normal;
+			}
+			em{
+				display: inline-block;
+				font-style: normal;
+				letter-spacing: 0.15em;
+				
+				color:$blu;
+			}
+		}
+			.prezzo_nd{font-weight: 600; color:$grigio;}
+			
+		}
+		
+		&:hover{
+			
+			text-decoration:none !important;
+			.marca{
+				color:$grigio !important;
+			}
+			.taglia_catalogo{
+				opacity: 1;
+			}
+			
+			
+		}
+
+	@media screen and (max-width:$break-large ){
+		.box_img{
+			img{
+				width:70%;
+			}
+
+		}
+		.cnt{
+			font-size: 0.9em
+		}
+	}
+}
+
+
+@mixin add_to_cart($Color, $ColorHover, $BorderColor,$BorderColorHover, $bgColor, $bgColorHover, $Width, $MaxWidth, $Radius){
+	/****************************************new cart section***********************/
+		#cart_section{
+			width:100%;
+			overflow: hidden;
+			position:relative;
+			//gestione taglie
+			.h5{
+				width: 100%;
+				position:relative;
+				border-bottom:solid 1px $Color;
+				text-transform: uppercase;
+				margin-bottom: 0;
+				min-height: 33px;
+				span{
+					display: none;
+					
+				}
+				&.collapsed{
+					cursor: pointer;
+					span{
+						display: block;
+						cursor: pointer;
+						position: absolute;
+						right: 50%;
+						top: 0;
+						font-size: 0;
+						padding: 0;
+						margin: 0;
+						width: 33px;
+						height: 33px;
+						background:  $bgColor url("../img/select_chevron.png") no-repeat center center;
+						background-size: 10px auto;
+						transform: translateY(0) !important;
+					}
+				}
+				&:hover, &.active{
+					color: $ColorHover;
+				}
+				a{
+					display: inline-block;
+					width:auto;
+					max-width: 200px;
+					text-align: left;
+					text-transform:uppercase;
+					font-weight:400;
+					font-size:0.83em;
+					margin:0px ;
+					position: absolute;
+					right:0;
+					top:0;
+					letter-spacing: 0;	
+				}	
+			}
+			#taglia_wrap{
+				&.collapsed{display: none;}
+
+				background: $bgColor;
+				border:solid 1px $BorderColor;
+				width:100%;
+				//max-height: 300px;
+				padding:0;
+				margin: 0px 0 15px; 
+				
+				overflow-x: hidden;
+				overflow-y:auto;
+				position: relative;
+				display: flex;
+				flex-flow: row wrap;
+				justify-content: flex-start;
+				align-items: flex-start;
+				align-content:  center;
+				
+				a.taglia{
+					
+					min-width: 40px;
+					height: 40px;
+					line-height: 40px;
+				
+					border:solid 1px $BorderColor;
+					text-align: center;
+					margin:10px 10px 0px 0;
+					font-size: 1em;
+					padding:  0;
+			
+					
+					&:hover, &.selected{
+						border-color:$BorderColorHover;
+						color:$ColorHover;
+						font-weight:600;
+						background: $bgColorHover;
+					}
+					
+				}
+				//gestione dei kit
+				&.kit{
+					padding: 10px;
+					border:solid 1px $BorderColor;
+					max-height: 300px;
+					padding:0;
+					margin: 0px 0 15px; 
+					overflow-x: hidden;
+					overflow-y:auto;
+					li{
+						width:100%;
+						display: flex;
+						flex-flow: row wrap;
+						justify-content: flex-start;
+						align-items: center;
+						align-content: center;
+						padding:10px;
+						border-bottom:solid 1px $Color;
+						margin: 0;
+						span.img{
+							width: 100%;
+							max-width: 70px;
+							height: auto;
+							border:solid 1px $Color;
+							img{
+								display: block;
+								width: 100%;
+								height: auto;
+							}
+						}
+						strong{
+							width: calc(100% - 80px);
+							text-transform: capitalize;
+							margin: 0 0 5px 10px;
+						}
+						a{
+							width: auto;
+							min-width: 40px;
+							height: 40px;
+							line-height: 40px;
+						
+							border:solid 1px $BorderColor;
+							text-align: center;
+							margin:10px 10px 10px 0;
+							font-size: 1em;
+							padding:  0;
+					
+							
+							&:hover, &.selected{
+								border-color:$BorderColorHover;
+								color:$ColorHover;
+								font-weight:600;
+								background: $bgColorHover;
+							}
+						}
+					}	
+				}
+
+			}
+
+
+
+
+
+
+			//size result
+			p{
+				text-transform: uppercase;
+				color: $Color;
+				margin: 0 0 30px; 
+			}
+			// area acquisto
+			ul{
+				list-style:none;
+				width:100%;
+				display:block;
+				position: relative;
+				overflow: hidden;
+				margin:0 0 30px;
+				padding:0;
+				display: flex;
+				flex-flow: row wrap;
+				justify-content: flex-start;
+				align-content: flex-start;
+				li{
+					width:calc(50% - 10px);
+					overflow: hidden;
+					margin: 0 10px 15px 0;
+					//generico per tutti i tasti
+					a{
+						display: block;
+						background: $bgColor;
+						margin:0;
+						width:100%; 
+						border:solid 1px $BorderColor;
+						padding: 0px 10px;
+						height: 35px;
+						font-size: 1em;
+						line-height: 35px;
+						letter-spacing: 0.01em;
+						font-weight: 400;
+						text-align: center;
+						text-transform: uppercase;
+						cursor: pointer;
+						position: relative;
+						color: $Color;
+						span{
+							position: absolute;
+							top:0.5px;
+							right: 0 ;
+							width:100%;
+							max-width: 32px;
+							height: 32px;
+							line-height: 34px;
+							background: $bgColorHover;
+							
+							text-align: center;
+							color:$bgColor;
+							font-size:1.2em;
+							i, svg{
+								display:block;
+								width:25px;
+								height: 25px;
+								text-align: center;
+								color:$bgColor;
+								margin:5px auto;
+							}
+						}
+						&:hover{
+							background: $bgColor;
+							color:$Color;
+							text-decoration:none;
+							span{
+								background: $bgColor;
+								color: $Color;
+								i{
+									background: $Color;
+								}
+							}
+						}
+					}
+
+					//gestione delle quantità
+					&#qty{
+						display: none !important; //in genrere non viene mai attivato
+						width:100%;
+						max-width: 70px;
+						border:solid 1px $blu;
+						padding: 0 20px;
+						position: relative;
+						background: $bgColor;
+						
+						.qty {
+							border-width: 0px;
+							width: 100%;
+							padding: 8.4px 0;
+							line-height: 1;
+							-moz-appearance: textfield;
+							appearance: textfield;
+							-webkit-appearance: textfield;
+							text-align: center;
+							font-weight: 400;
+							color: $Color;
+							display: inline-block;
+							background-color: transparent;
+							font-size: 0.9em;
+							border:none;
+							margin:0;
+						}
+						span{
+							display: block;
+							position: absolute;
+							top:50%;
+							transform: translateY(-50%);
+							color: $Color;
+							cursor:pointer;
+							&:before{
+								font-family: 'Font Awesome 5 Free';
+								font-style: normal;
+								font-weight: 900;
+								font-display: auto;
+								font-size: 0.8em;
+							}
+							&.decrease{
+								left:5px;
+								&:before{
+									content: "\f068";
+									
+								}
+							}
+							&.increase{
+								right:5px;
+								&:before{
+									content: "\f067";
+									
+								}
+							}
+						}
+					}
+					//aggiungi al carrello 
+					&#add{
+						width:calc(100% - 70px);
+						a{
+							background: $Color;
+							color:$ColorHover;
+							span{
+								display: none;
+								background: $ColorHover;
+								color:$Color;
+								
+							}
+							i, svg{
+							mask: url("../img/icon/shopping-bag.svg") no-repeat center / contain;
+								-webkit-mask: url("../img/icon/shopping-bag.svg") no-repeat center / contain;
+								background:$Color; 
+								text-indent: -9000em;
+								margin-bottom:-8px;
+								
+							}
+							
+							&:hover{
+								background:$ColorHover;
+								color: $Color;
+								text-decoration:none;
+								span{
+									background:$Color ;
+									color:$ColorHover ;
+									i{
+										background: $ColorHover;
+									}
+								}
+							}
+						}
+					}
+					//aggiungi alla wishlist
+					&#wish{
+						width:50px;
+						a{
+							//border-color:$grigio_chiaro;
+							span{
+								background: $ColorHover;
+								color:$Color;
+								max-width: 100%;
+							}
+							i, svg{
+							mask: url("../img/icon/heart.svg") no-repeat center / contain;
+								-webkit-mask: url("../img/icon/heart.svg") no-repeat center / contain;
+								background:$Color; 
+								text-indent: -9000em;
+								margin-bottom:-8px;
+								
+							}
+							&:hover{
+								background: $Color;
+								color:$ColorHover;
+								span{
+									background: $Color;
+									color:$ColorHover;
+								i{
+									background: $ColorHover;
+								}
+							}
+							}
+						}
+					}
+					//vai al carrello
+					&#cart{
+						display: none;
+						a{
+							span{
+								display: none;
+							}
+							i, svg{
+							mask: url("../img/icon/arrow-right-circle.svg") no-repeat center / contain;
+								-webkit-mask: url("../img/icon/arrow-right-circle.svg") no-repeat center / contain;
+								background:$ColorHover; 
+								text-indent: -9000em;
+								margin-bottom:-8px;
+								
+							}
+						}
+					}
+					//torna  all  shopping
+					&#back{
+						display: none;
+						a{
+							span{
+								display: none;
+							}
+							i, svg{
+							mask: url("../img/icon/arrow-left-circle.svg") no-repeat center / contain;
+								-webkit-mask: url("../img/icon/arrow-left-circle.svg") no-repeat center / contain;
+								background:$ColorHover; 
+								text-indent: -9000em;
+								margin-bottom:-8px;
+							}
+						}
+					}
+				}
+
+
+
+			}
+			// fine area acquisto
+
+			
+
+
+
+			// area sold out
+			form{
+				margin: 0 0 30px ;
+				input[type=email]{
+					display: block;
+					color:$Color;
+					padding: 10px 0;
+					margin:0 0 15px;
+				}
+				button{
+					display: block;
+					color:$ColorHover;
+					background:$Color;
+					padding:0px 15px;
+					line-height: 35px;
+					margin:0 0 15px; 
+					text-transform: uppercase;
+					border:solid 1px $Color;
+					&:hover{
+						color:$Color;
+						background:$ColorHover;
+					}
+				}
+			}
+		}
+	/****************************************end new cart section***********************/
+}
+

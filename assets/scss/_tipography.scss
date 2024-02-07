@@ -1,0 +1,459 @@
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{ 
+	display:none;
+	font: 300 15px 'Lato', sans-serif;
+	background: $bianco;
+	overflow: auto;
+	width: 100%;
+	color:$blu;
+	padding:0;
+	margin:0;
+	&.menuopen{
+		overflow: hidden; 
+	}
+	//@include scrollbar($color, $bgcolor, $width, $radius);
+	@include scrollbar($blu, transparent, 5px, 0);
+}
+
+
+h1, h2, h3,h4,.h1, .h2, .h3,.h4 { 
+	font-weight: 600; 
+	line-height: 1em;
+	padding: 0;
+	 margin: 0 0 30px;
+	color:$blu; 
+	&.javacom{
+		font-family:'javacom', serif;
+	}
+}
+h1, .h1{font-size:2.750em;}
+h2, .h2{font-size:1.8em;
+	position: relative;
+	overflow: hidden;
+	text-align: left;
+	
+}
+h3, .h3{font-size:1.6em;}
+h4, .h4{font-size:1.5em;}
+h5, .h5{font-size:1.1em;}
+h6, .h6{font-size:1em;	color:$blu;  margin: 0 0 10px;}
+
+
+*{
+	outline: none !important;
+}
+
+a{
+	text-decoration:none;
+	outline: none !important;
+	color:$blu;
+	transition: all 0.5s ease-in;
+	
+	
+	&:hover{
+		text-decoration:none !important;
+		color:$grigio_scuro;
+	}
+}
+input, select, textarea, button{
+	width:calc(100% - 20px); 
+	outline:none !important;
+	border:none;
+	border-bottom:dotted 1px $grigio;
+	padding: 0.2em 1em;
+	margin:0 10px;
+	color:$grigio_scuro;
+	background: $bianco;
+	font-weight: 300;
+	font-size:1em;
+	&:focus{
+		border-color:$grigio_scuro;
+		color:$grigio_scuro;
+	}
+	@include scrollbar($grigio, $grigio_chiaro, 7px, 0);
+}
+/*input, select{
+	border-radius:25px;
+	
+}*/
+
+input[type="checkbox"],input[type="radio"]{
+	width:auto;
+} 
+input[type="submit"], button{
+	color:$grigio_scuro;
+	font-weight: 700;
+}
+
+
+button{
+	border:none;
+	background: transparent;
+	font-weight: 700;
+}
+.btn,.btn_inv {
+	display: inline-block;
+	padding: 5px 15px;
+	border-radius:5px;
+	background: $blu ;
+	color:$bianco;
+	font-size:0.857em;
+	font-weight: 600;
+	border:solid 1px $blu;
+	text-transform: uppercase;
+	box-shadow: 0 0 2px $blu;
+	&:hover{
+		background: $bianco ;
+	color:$blu;
+	}
+}
+.btn_inv{
+	background: $bianco ;
+	color:$blu;
+	&:hover{
+	background: $blu ;
+	color:$bianco;
+	
+	}
+}
+
+
+select {
+  width: 100%;
+  max-width: 300px;
+  padding: 0px 35px 0px 5px;
+  font-size: 0.9em;
+  height: 35px;
+text-transform: lowercase;	
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url("../img/select_chevron.png")  no-repeat  calc(100% - 15px) 15px;
+  background-size: 10px auto;
+  cursor: pointer;
+  margin: 0;	
+}
+label.check{
+width: calc(100% - 45px);
+font-size: 1em;
+text-transform:uppercase;
+position: relative;
+cursor: pointer;
+padding: 0 10px 0 35px;
+
+	input{
+	  position: absolute;
+	  opacity: 0;
+	  cursor: pointer;
+	  height: 10px;
+	  width: 10px;
+	  top:15px;
+	  left:15px;
+	}
+	.checkmark {
+	  position: absolute;
+	  top: 3px;
+	  left: 0px;
+	  height: 13px;
+	  width: 13px;
+	  background-color: $bianco;
+	  border:solid 1px $blu;	
+		&:after {
+		  content: "";
+		  position: absolute;
+		  display: none;
+		  left: 1px;
+		  top: 1px;
+		  width: 9px;
+		  height: 9px;
+		  background: $blu;		
+		}
+	&.warn{
+		border:solid 1px $blu_chiaro;
+		}
+	}
+	&:hover input ~ .checkmark {
+		  background-color: $bianco;
+		}
+	input:checked ~ .checkmark {
+	  background-color: $bianco;
+		&:after{
+			display: block;
+		}
+	}
+
+}	
+
+/* CAUTION: IE hackery ahead */
+
+
+select::-ms-expand { 
+    display: none; /* remove default arrow in IE 10 and 11 */
+}
+
+/* target Internet Explorer 9 to undo the custom arrow */
+@media screen and (min-width:0\0) {
+    select {
+        background:none\9;
+        padding: 5px\9;
+    }
+}
+
+
+
+
+
+
+strong{
+	color:$blu;
+	font-weight: 600;
+}
+
+#mainwrap{
+	.container{
+	max-width: $break-xlarge
+	
+	}
+	section{
+		position: relative;
+		z-index: 5;
+		background: $bianco;
+	
+	}
+}
+
+/*
+.container-fluid{
+	padding-right: 35px;
+	padding-left: 35px;
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 120em;
+	@media screen and (max-width:$break-large-plus){
+	padding-right: 15px;
+	padding-left: 15px;
+	max-width: none;
+	}
+}
+*/
+
+
+
+
+/*****autocomplete*******/
+
+
+
+
+
+
+.ui-autocomplete{
+	
+	background: rgba($bianco, .9);
+	border:none;
+	max-width: 300px !important;
+	max-height: 300px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	margin:0;
+	padding: 0;
+	z-index: 10003;
+	font-size: 0.7em;
+	font-weight: 300;
+	letter-spacing: 0.2em;
+	.ui-menu-item{
+		border-bottom:dotted 1px $grigio ;
+		list-style: none;
+		margin: 0;
+		text-transform: uppercase;
+		cursor: pointer;
+		.ui-menu-item-wrapper{
+			padding: 5px 10px;
+		}
+		&:hover{
+			background: rgba($bianco, .9);
+			color:$grigio-scuro;
+			border-bottom:dotted 1px $blu ;
+			}
+		}
+	}
+
+
+.ui-helper-hidden-accessible{
+	display: none;
+}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover{
+	background: rgba($grigio-chiaro, .9);
+	font-weight: 600;
+	color:$blu;
+}
+
+/*select menu*/
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active,
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus, .ui-button:hover, .ui-button:focus{
+border:none;
+background: $bianco;
+font-weight: normal;
+color: $blu;
+	
+}
+
+/*tabs*/
+.ui-tabs { 
+    background: transparent; 
+    border: none; 
+	overflow: hidden
+} 
+.ui-widget-header { 
+    background: transparent; 
+    border: none; 
+    -moz-border-radius: 0px; 
+    -webkit-border-radius: 0px; 
+    border-radius: 0px; 
+} 
+.ui-tabs-nav { 
+    //text-align: center !important;
+	
+	li { 
+		display: inline-block !important; 
+		float: none !important; 
+		top: 0px; 
+		margin: 0em; 
+		padding-bottom: 0px; 
+		padding: 0 12.5px;
+	}
+	
+	.ui-state-default { 
+    background: transparent; 
+    border: none; 
+		a{color:$grigio-scuro;}
+	} 
+	.ui-state-active { 
+    background: transparent; 
+    border: none; 
+		font-weight:600;	
+		a{color:$blu;}
+	} 
+} 
+.ui-tabs-panel{
+	width:100% !important;
+	
+	overflow: hidden
+}
+
+
+
+/*****dialog*****/
+
+.ui-widget-overlay{
+	background: rgba($blu, .5);
+	width:100%;
+	min-height: 100%;
+	overflow: hidden;
+	position: fixed;
+	top:0;
+	left: 0;
+	z-index: 10000
+}
+.ui-dialog {
+	background:$bianco;
+	width:100%;
+	max-width:900px;
+	overflow: hidden;
+	border:solid 1px $blu;
+	
+	z-index: 10001;
+
+	
+	.ui-dialog-titlebar{
+		background: $blu;
+		color:$bianco;
+		padding: 5px 10px;
+		margin:0 0 15px;
+		font-size:1.2em;
+		text-transform: uppercase;
+	}
+	.ui-dialog-titlebar-close{
+	display: block;
+	position:absolute;
+	top:10px;
+	right: 10px;
+	width: 16px;
+	height: 16px;
+	background: $blu url("../img/close_bianco.png") no-repeat 0 0 ;
+	background-size: 100% auto;
+	color:$bianco;
+	}
+	.ui-dialog-content{
+		padding: 15px;
+		min-width: 400px;
+		label{
+			display: block;
+			width: 100%;
+			border-bottom:  solid 1px $grigio;
+			font-size: 1.1em;
+			color: $grigio_scuro;
+			text-transform: capitalize;
+		}
+		select{
+			display: block;
+			width:100%;
+			margin:0 0 15px;
+			border:none;
+			border-bottom: solid 1px $grigio;
+		}
+		
+	}
+}
+
+
+
+
+
+
+/*fancybox*/
+.fancybox-bg{
+	background: $bianco;
+	opacity:1 !important;
+}
+
+/*responsive tabs*/
+.r-tabs .r-tabs-nav {
+    margin: 0;
+    padding: 0;
+}
+
+.r-tabs .r-tabs-tab {
+    display: inline-block;
+    margin: 0;
+    list-style: none;
+}
+
+.r-tabs .r-tabs-panel {
+    padding: 0;
+    display: none;
+}
+
+.r-tabs .r-tabs-accordion-title {
+    display: none;
+}
+
+.r-tabs .r-tabs-panel.r-tabs-state-active {
+    display: block;
+}
+
+/* Accordion responsive breakpoint */
+@media only screen and (max-width: $break-large-plus) {
+    .r-tabs .r-tabs-nav {
+        display: none !important;
+    }
+
+    .r-tabs .r-tabs-accordion-title {
+        display: block !important;
+    }
+}
+
