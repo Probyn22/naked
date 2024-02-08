@@ -25,18 +25,26 @@ $( document ).ready(function() {
 	$('.dropdown-toggle').mouseenter(function(){
 
 		$('.dropdown-menu').slideUp();
-
-
 		/*trovo l'id del parent*/
 		var id=$(this).attr('id');
 		//alert(id); 
-
 		$("#"+id+"-tab").stop().slideDown();
 			
+	});
+	$('.dropdown-menu').mouseleave(function(){
+		$(this).slideUp();
+	});
+	if (break_width() < 1080){
+
+		$('.dropdown-toggle i').click(function(){
+			/*trovo l'id del parent*/
+			var id_mob=$(this).parent().find('a').attr('id');
+			console.log(id_mob);
+			$("#"+id_mob+"-tab").stop().slideDown();
 		});
-		$('.dropdown-menu').mouseleave(function(){
-			$(this).slideUp();
-		});
+	}
+
+
 
 
 	/*********************
