@@ -23,7 +23,12 @@ $( document ).ready(function() {
 
 	//alert('pippo');
 	$('.dropdown-toggle').mouseenter(function(){
-			$('.dropdown-menu').stop().slideDown();
+
+		/*trovo l'id del parent*/
+		var id=$(this).attr('id');
+		//alert(id); 
+
+		$("#"+id+"-tab']").stop().slideDown();
 			
 		});
 		$('.dropdown-menu').mouseleave(function(){
