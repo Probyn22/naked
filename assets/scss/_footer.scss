@@ -40,12 +40,13 @@ footer{
 		
 		.icons{
 			width: 100%;
-			margin:20px 0;
+			margin:20px auto;
 			padding: 0;
 			display: flex;
 			flex-flow: row;
 			justify-content: center;
 			align-content: center;
+			align-items: center;
 			list-style: none;
 			max-width: 400px;
 			li{
@@ -84,134 +85,48 @@ footer{
 
 
 @media screen and (max-width:$break-large){
-	#newsletter{
-	width:100%;
-	background: $blu;
-	color:$bianco;
-	text-align: center;
-	padding: 30px 15px;
-	.content{
-		width:100%;
-		margin:0 auto;
-		display: flex;
-		flex-flow: row wrap;
-		align-items: center;
-		
-		.h4{
-			width: 100%;
-			max-width: none;
-			color:$bianco ;
-			text-align: center;
-			margin: 0 0 20px ;
-		}
-		p{
-			margin:0 auto;
-			a:hover{
-				border-color:$bianco;
-				text-decoration: none !important;
-			}
-		}
 	
-	}
-	}
 	footer{
-	.row{
-		.col{
+		ul{
 			width:100%;
-			max-width: 100%;
-			flex:0 0 100%;	
-		}
-		#lnk_footer{
-			width:100% !important;
-			display: flex !important;
-			flex-flow: column !important;
-			justify-content: center !important;
-			text-align: center !important;
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: flex-start;
+			list-style: none;
+			margin:0 0 10px 0px;
+			padding: 0;
+			text-transform: capitalize;
+			text-align: left;
 			li{
-				width:100% !important;
-				margin: 0 0px 5px 0 !important;
-				border-bottom: solid 1px $grigio !important;
-				&:last-child{max-width: none !important} 
-				.h4{
-					text-transform: uppercase;
-					width: 100%;
-					text-align: center;
-					margin:10px 0px ;
-					font-weight: 600;
-					color:$blu;
-					font-size: 1rem;
-					background: transparent;
-					cursor: pointer;
-				}
-				ul{
-					width: 100%;
-					padding: 0;
-					margin: 0;
-					list-style: none;
-					li{
-						width: 100%;
-						margin:0 0  5px 0;
-						font-size: 0.9rem;
-						border-bottom: none !important;
-						a{
-							display: inline-block;
-							padding:5px 15px;
-							&:hover{
-									color:$blu_chiaro;
-								}
-						}
-					}
-
-
-
-
-				}
-				
-				
-				
+				width:100%;
+				margin: 0 0px 5px 0;
+				border-bottom: solid 1px $grigio_chiaro ;
 			}
 			
 			
 		}
-		.disclaimer{
-			font-size: 0.857rem;
-			padding: 0 15px;
-		}
 		
-		.loghi{
+		
+		.icons{
 			width: 100%;
-			max-width: 350px;
 			margin:20px auto;
 			padding: 0;
 			display: flex;
 			flex-flow: row;
-			justify-content: space-between;
+			justify-content: center;
 			align-content: center;
+			align-items: center;
 			list-style: none;
+			max-width: 400px;
 			li{
-				width:75%;
-				&:first-child{
-				max-width: 100px;
-				}
-				img{
-					width:100%;
-					height: auto;
-					vertical-align: middle;
-				}
+				max-width: 40px;
+				margin:0 5px;
 			}
 			
 			
 		}
-		
-		
-		
-		
-		
 	
-		
-	}
-	
-}	
+	}	
 }
 
 
