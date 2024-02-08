@@ -39,14 +39,14 @@ $( document ).ready(function() {
 		$('.dropdown i').click(function(){
 			$('.dropdown-menu').slideUp();
 			$(this).toggleClass('la-angle-down').toggleClass('la-angle-up');
-			if ($(this).hasClass('la-angle-down')){
+			if ($(this).hasClass('la-angle-up')){
 				/*trovo l'id del parent*/
 				var id_mob=$(this).parent().find('a').attr('id');
 				$("#"+id_mob+"-tab").stop().slideDown();
 
 				
 			}
-			if ($(this).hasClass('la-angle-up')){
+			if ($(this).hasClass('la-angle-down')){
 				var id_mob=$(this).parent().find('a').attr('id');
 				$("#"+id_mob+"-tab").stop().slideUp();
 				
