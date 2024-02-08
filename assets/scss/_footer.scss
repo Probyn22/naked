@@ -44,10 +44,13 @@ footer{
 			padding: 0;
 			display: flex;
 			flex-flow: row;
-			justify-content: space-between;
+			justify-content: center;
 			align-content: center;
 			list-style: none;
 			max-width: 400px;
+			li{
+				max-width: 60px;
+			}
 			
 			
 		}
