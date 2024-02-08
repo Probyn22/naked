@@ -270,11 +270,14 @@
 		position: fixed;
 		background: $bianco;
 		margin: 0 !important;
+		border-bottom: solid 1px $nero;
 		#tools{
 			width:100%;
+			max-width: 200px;
 			position: absolute;
-			top: 58px;
-			left: 0;
+			top: 22px;
+			left: auto;
+			right:15px;
 			padding: 0;
 			margin: 0;
 			z-index: 30;
@@ -301,8 +304,8 @@
 			width:21px;
 			display:block;
 			position: absolute;
-			top:0;
-			left: 0;
+			top:22px;
+			left: 15px;
 		}
 		#main-menu{
 			background: rgba($bianco, 0.8);
