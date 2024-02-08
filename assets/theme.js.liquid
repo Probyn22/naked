@@ -24,6 +24,9 @@ $( document ).ready(function() {
 	//alert('pippo');
 	$('.dropdown-toggle').mouseenter(function(){
 
+		$('.dropdown-menu').slideUp();
+
+
 		/*trovo l'id del parent*/
 		var id=$(this).attr('id');
 		//alert(id); 
