@@ -280,7 +280,7 @@
 				content: '';
 				display: block;
 				position: absolute;
-				top:0;
+				top:1;
 				left: 0;
 				width:calc(100% - 30px);
 				background: $bianco;
@@ -288,7 +288,7 @@
 				height: 100vh;
 			}
 			li{
-				background: $bianco;
+				//background: $bianco;
 				width: calc(100% - 30px);
 				margin: 0;
 				padding: 15px;

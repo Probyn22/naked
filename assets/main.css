@@ -891,7 +891,7 @@ strong {
     content: '';
     display: block;
     position: absolute;
-    top: 0;
+    top: 1;
     left: 0;
     width: calc(100% - 30px);
     background: #ffffff;
@@ -900,7 +900,6 @@ strong {
   }
   /* line 290, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_header.scss */
   #shopify-section-header header #main-menu li {
-    background: #ffffff;
     width: calc(100% - 30px);
     margin: 0;
     padding: 15px;
