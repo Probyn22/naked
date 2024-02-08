@@ -71,7 +71,7 @@
 			          {%- assign has_child_link_list = false %}
 			        {%- endif -%}
 			        <li class="nav-item {% if link.active %}active{% endif %} ">
-			          <a href="{{ link.url }}" class="nav-link {% if has_child_link_list %} dropdown-toggle {% endif %}" >
+			          <a href="{{ link.url }}" class="nav-link {% if has_child_link_list %} dropdown-toggle {% endif %}" {% if has_child_link_list %} id="{{ child_link_list_handle }}-dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"{% endif %}>
 			            {{ link.title | escape }} {% if link.active %}<span class="sr-only">(current)</span>{% endif %}
 			          </a>
 
