@@ -236,7 +236,9 @@
 					list-style: none;
 					margin:0 ;
 					padding:0 ;
-					position:relative;
+					position:relative !important;
+					top:auto;
+					left: auto;
 					background:rgba($bianco, 0.9);
 					border: 0;
 					border-bottom:solid 0px $nero;
