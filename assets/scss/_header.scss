@@ -155,25 +155,25 @@
 				}
 				div.dropdown-menu{
 					display: none;
-					width:138px;
+					width:100%;
 					list-style: none;
-					margin:0 -7.5px 1px;
+					margin:0 ;
 					padding:0 ;
-					position:absolute;
-					 background:rgba($bianco, 0.9);
+					position:relative;
+					background:rgba($sfondo, 0.9);
 					border: 0;
-					border-bottom:solid 1px $nero;
+					border-bottom:solid 0px $nero;
 					&:before{
 						content:'';
-						display: block;
+						display: none;
 						width:100%;
 						background:$sfondo;
 						height: 25px;
 						position:relative;
-
 					}
 					
 					li{
+						width: 100%;
 						background:transparent;
 						margin: 0;
 						padding:0 0 5px 0;
