@@ -87,6 +87,7 @@ footer{
 @media screen and (max-width:$break-large){
 	
 	footer{
+		.row{
 		ul{
 			width:100%;
 			display: flex;
@@ -125,7 +126,7 @@ footer{
 			
 			
 		}
-	
+		}
 	}	
 }
 

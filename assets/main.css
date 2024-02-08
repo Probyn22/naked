@@ -5553,8 +5553,8 @@ footer #sub-footer a {
 }
 
 @media screen and (max-width: 992px) {
-  /* line 90, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
-  footer ul {
+  /* line 91, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
+  footer .row ul {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
@@ -5565,14 +5565,14 @@ footer #sub-footer a {
     text-transform: capitalize;
     text-align: left;
   }
-  /* line 100, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
-  footer ul li {
+  /* line 101, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
+  footer .row ul li {
     width: 100%;
     margin: 0 0px 5px 0;
     border-bottom: solid 1px #f1f1f1;
   }
-  /* line 110, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
-  footer .icons {
+  /* line 111, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
+  footer .row .icons {
     width: 100%;
     margin: 20px auto;
     padding: 0;
@@ -5584,8 +5584,8 @@ footer #sub-footer a {
     list-style: none;
     max-width: 400px;
   }
-  /* line 121, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
-  footer .icons li {
+  /* line 122, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
+  footer .row .icons li {
     max-width: 40px;
     margin: 0 5px;
   }
