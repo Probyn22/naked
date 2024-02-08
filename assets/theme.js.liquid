@@ -37,6 +37,7 @@ $( document ).ready(function() {
 	if (break_width() < 1080){
 
 		$('.dropdown i').click(function(){
+			alert('pippo');
 			/*trovo l'id del parent*/
 			var id_mob=$(this).parent().find('a').attr('id');
 			alert(id_mob);
