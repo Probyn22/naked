@@ -900,6 +900,7 @@ strong {
   }
   /* line 290, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_header.scss */
   #shopify-section-header header #main-menu li {
+    background: transparent;
     width: calc(100% - 30px);
     margin: 0;
     padding: 15px;
