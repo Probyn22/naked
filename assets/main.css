@@ -918,7 +918,8 @@ strong {
   }
   /* line 310, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_header.scss */
   #shopify-section-header header #main-menu {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(0, 0, 0, 0.8);
+    transition: all 0.5s ease-in;
     margin: 0;
     padding: 0;
     display: none !important;

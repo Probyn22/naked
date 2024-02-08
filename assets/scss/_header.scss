@@ -308,8 +308,8 @@
 			left: 15px;
 		}
 		#main-menu{
-			background: rgba($bianco, 0.8);
-			
+			background: rgba($nero, 0.8);
+			transition: all 0.5s ease-in;
 			margin: 0;
 			padding: 0;
 			display: none !important;
