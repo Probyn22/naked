@@ -231,6 +231,25 @@
 						color:$blu_chiaro;
 					}
 				}
+				div.dropdown-menu{
+					width:100%;
+					list-style: none;
+					margin:0 ;
+					padding:0 ;
+					position:relative;
+					background:rgba($bianco, 0.9);
+					border: 0;
+					border-bottom:solid 0px $nero;
+					a{
+						display: block;
+						font-size:0.9em;
+						border-bottom:none;
+						padding:3px 10px;
+						margin: 0 10px;
+						color:$nero;
+					}
+
+				}
 			}
 		}
 
