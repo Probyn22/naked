@@ -146,12 +146,12 @@
 					//letter-spacing: 0.9px;
 					padding: 0 0 10px;
 					border-bottom:solid 1px  $blu;
-					&.dropdown-toggle{
-						&:after{
-							display: none;
-						}
-					}
 					
+				}
+				.dropdown-toggle{
+					&:after{
+						display: none;
+					}
 				}
 				div.dropdown-menu{
 					display: none;
