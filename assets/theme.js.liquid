@@ -42,13 +42,13 @@ $( document ).ready(function() {
 			if ($(this).hasClass('la-angle-up')){
 				/*trovo l'id del parent*/
 				var id_mob=$(this).parent().find('a').attr('id');
-				$("#"+id_mob+"-tab").stop().slideUp();
+				$("#"+id_mob+"-tab").stop().slideDown();
 
 			}
 			if ($(this).hasClass('la-angle-down')){
 				
 				var id_mob=$(this).parent().find('a').attr('id');
-				$("#"+id_mob+"-tab").stop().slideDown();
+				$("#"+id_mob+"-tab").stop().slideUp();
 				
 			
 			}
