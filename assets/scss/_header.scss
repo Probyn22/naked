@@ -346,6 +346,7 @@
 				z-index: 10;
 				a{
 					border-bottom: none;
+					padding: 0;
 				}
 				i{
 					width:25px;
@@ -360,7 +361,7 @@
 					width:100%;
 					list-style: none;
 					margin:0 ;
-					padding:0 ;
+					padding:10px ;
 					position:relative;
 					background:rgba($bianco, 0.9);
 					border: 0;
