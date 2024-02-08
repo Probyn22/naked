@@ -72,9 +72,9 @@
 			        {%- endif -%}
 			        <li class="nav-item {% if link.active %}active{% endif %} {% if has_child_link_list %}dropdown{% endif %}">
 			          <a href="{{ link.url }}" class="nav-link {% if has_child_link_list %}dropdown-toggle{%  endif %}" {% if has_child_link_list %}id="{{ child_link_list_handle }}-dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"{% endif %}>
-			          	{% if has_child_link_list %}<i class="las la-angle-down"></i>{% endif %}
-			            {{ link.title | escape }} {% if link.active %}<span class="sr-only">(current)</span>{% endif %}
-			            
+			          	{{ link.title | escape }} 
+			            {% if has_child_link_list %}<i class="las la-angle-down"></i>{% endif %}
+			            {% if link.active %}<span class="sr-only">(current)</span>{% endif %}
 			          </a>
 			          {%- if has_child_link_list -%}
 			            <div id="{{ child_link_list_handle }}-tab" class="dropdown-menu" aria-labelledby="{{ child_link_list_handle }}-dropdown-toggle">
