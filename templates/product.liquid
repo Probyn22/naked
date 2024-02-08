@@ -1,5 +1,6 @@
 <main>
 	<div id="column-left">
+		{%- if product.image.size > 0 -%}
 		<img src="{{ image | prouct_img_url: '480x480', scale:2 crop: center}}" alt="{{ product.title | escape }}">
 		{%- if product.image.size > 0 -%}
 			<ul id="thumbnails">
