@@ -155,25 +155,25 @@
 				}
 				div.dropdown-menu{
 					display: none;
-					width:100%;
+					width:138px;
 					list-style: none;
-					margin:0 ;
+					margin:0 -7.5px 1px;
 					padding:0 ;
-					position:relative;
-					background:rgba($sfondo, 0.9);
+					position:absolute;
+					 background:rgba($bianco, 0.9);
 					border: 0;
-					border-bottom:solid 0px $nero;
+					border-bottom:solid 1px $nero;
 					&:before{
 						content:'';
-						display: none;
+						display: block;
 						width:100%;
 						background:$sfondo;
 						height: 25px;
 						position:relative;
+
 					}
 					
 					li{
-						width: 100%;
 						background:transparent;
 						margin: 0;
 						padding:0 0 5px 0;
@@ -344,9 +344,28 @@
 				border-bottom: solid 1px $grigio_chiaro;
 				position: relative;
 				z-index: 10;
+				i{
+					width:25px;
+					height: 25px;
+					line-height: 23px;
+					position: absolute;
+					top:0;
+					right: 0;
+
+				}
+			
+
+
+
 			}
 
 		}
+
+
+		
+
+
+
 		
 	}
 	
