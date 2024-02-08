@@ -73,7 +73,10 @@
 			        <li class="nav-item {% if link.active %}active{% endif %} ">
 			          <a href="{{ link.url }}" class="nav-link {% if has_child_link_list %} dropdown-toggle {% endif %}" 
 			          	{% if has_child_link_list %} data-tab="{{ child_link_list_handle }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			            {{ link.title | escape }} {% if link.active %}<span class="sr-only">(current)</span>{% endif %}
+			            {{ link.title | escape }} 
+
+			            {% if link.active %}<span class="sr-only">(current)</span>{% endif %}
+			            pippo
 			          </a>
 
 			          {% if has_child_link_list %}<span class="dropdown-toggle" data-tab="{{ child_link_list_handle }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="las la-angle-down"></i></span>{% endif %}
