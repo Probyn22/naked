@@ -38,7 +38,7 @@ footer{
 		}
 		
 		
-		.loghi{
+		.icons{
 			width: 100%;
 			margin:20px 0;
 			padding: 0;
@@ -47,17 +47,7 @@ footer{
 			justify-content: space-between;
 			align-content: center;
 			list-style: none;
-			li{
-				width:75%;
-				&:first-child{
-				max-width: 100px;
-				}
-				img{
-					width:100%;
-					height: auto;
-					vertical-align: middle;
-				}
-			}
+			max-width: 400px;
 			
 			
 		}
