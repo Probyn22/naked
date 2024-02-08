@@ -38,16 +38,17 @@ $( document ).ready(function() {
 
 		$('.dropdown i').click(function(){
 			$('.dropdown-menu').slideUp();
-			$('.dropdown i').removeClass('act');
-			$(this).toggleClass('act');
-			if ($(this).hasClass('act')){
+			$(this).toggleClass('la-angle-down').toggleClass('la-angle-up');
+			if ($(this).hasClass('la-angle-down')){
 				/*trovo l'id del parent*/
 				var id_mob=$(this).parent().find('a').attr('id');
 				$("#"+id_mob+"-tab").stop().slideDown();
-				$(this).removeClass('act');
+
 				
-			}else{
-				$('.dropdown-menu').slideUp();
+			}
+			if ($(this).hasClass('la-angle-up')){
+				var id_mob=$(this).parent().find('a').attr('id');
+				$("#"+id_mob+"-tab").stop().slideUp();
 				
 			
 			}
