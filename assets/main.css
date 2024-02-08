@@ -5527,46 +5527,7 @@ section#quickview .txt #txt_bottom #cart_lnk li a.add_cart {
 }
 
 /* CSS Document */
-/* line 6, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
-#newsletter {
-  width: 100%;
-  background: #013056;
-  color: #ffffff;
-  text-align: center;
-  padding: 30px 15px;
-}
-
-/* line 12, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
-#newsletter .content {
-  max-width: 500px;
-  margin: 0 auto;
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-}
-
-/* line 20, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
-#newsletter .content .h4 {
-  max-width: 260px;
-  color: #ffffff;
-  text-align: right;
-  margin: 0 20px 0 0;
-  text-transform: uppercase;
-  font-size: 1em;
-}
-
-/* line 29, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
-#newsletter .content p {
-  margin: 0;
-}
-
-/* line 31, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
-#newsletter .content p a:hover {
-  border-color: #ffffff;
-  text-decoration: none !important;
-}
-
-/* line 41, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
+/* line 7, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
 footer {
   position: relative;
   margin: 0 auto;
@@ -5578,26 +5539,26 @@ footer {
   font-size: 1em;
 }
 
-/* line 50, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
+/* line 16, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
 footer .container {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0;
 }
 
-/* line 55, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
+/* line 21, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
 footer .row {
   margin: 0;
   padding: 0;
 }
 
-/* line 58, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
+/* line 24, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
 footer .row .col {
   margin: 0;
   padding: 0;
 }
 
-/* line 62, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
+/* line 28, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
 footer .row #lnk_footer {
   width: 100%;
   display: flex;
@@ -5610,18 +5571,18 @@ footer .row #lnk_footer {
   text-align: left;
 }
 
-/* line 72, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
+/* line 38, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
 footer .row #lnk_footer li {
   width: calc(100% / 5);
   margin: 0 0px 5px 0;
 }
 
-/* line 75, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
+/* line 41, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
 footer .row #lnk_footer li:last-child {
   max-width: 100px;
 }
 
-/* line 78, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
+/* line 44, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
 footer .row #lnk_footer li .h4 {
   text-transform: uppercase;
   width: 100%;
@@ -5632,7 +5593,7 @@ footer .row #lnk_footer li .h4 {
   font-size: 0.857rem;
 }
 
-/* line 87, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
+/* line 53, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
 footer .row #lnk_footer li ul {
   width: 100%;
   padding: 0;
@@ -5640,25 +5601,25 @@ footer .row #lnk_footer li ul {
   list-style: none;
 }
 
-/* line 92, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
+/* line 58, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
 footer .row #lnk_footer li ul li {
   width: 100%;
   margin: 0 0  5px 0;
   font-size: 0.757rem;
 }
 
-/* line 97, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
+/* line 63, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
 footer .row #lnk_footer li ul li a:hover {
   color: #c4c4c4;
 }
 
-/* line 114, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
+/* line 80, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
 footer .row .disclaimer {
   font-size: 0.7rem;
   padding-top: 8px;
 }
 
-/* line 119, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
+/* line 85, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
 footer .row .loghi {
   width: 100%;
   margin: 20px 0;
@@ -5670,24 +5631,24 @@ footer .row .loghi {
   list-style: none;
 }
 
-/* line 128, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
+/* line 94, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
 footer .row .loghi li {
   width: 75%;
 }
 
-/* line 130, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
+/* line 96, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
 footer .row .loghi li:first-child {
   max-width: 100px;
 }
 
-/* line 133, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
+/* line 99, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
 footer .row .loghi li img {
   width: 100%;
   height: auto;
   vertical-align: middle;
 }
 
-/* line 150, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
+/* line 116, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
 footer #sub-footer {
   display: block;
   width: 100%;
@@ -5697,7 +5658,7 @@ footer #sub-footer {
   color: #ffffff;
 }
 
-/* line 157, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
+/* line 123, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
 footer #sub-footer a {
   color: #ffffff;
   text-transform: uppercase;
@@ -5706,7 +5667,7 @@ footer #sub-footer a {
 }
 
 @media screen and (max-width: 992px) {
-  /* line 171, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
+  /* line 137, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
   #newsletter {
     width: 100%;
     background: #013056;
@@ -5714,7 +5675,7 @@ footer #sub-footer a {
     text-align: center;
     padding: 30px 15px;
   }
-  /* line 177, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
+  /* line 143, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
   #newsletter .content {
     width: 100%;
     margin: 0 auto;
@@ -5722,7 +5683,7 @@ footer #sub-footer a {
     flex-flow: row wrap;
     align-items: center;
   }
-  /* line 184, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
+  /* line 150, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
   #newsletter .content .h4 {
     width: 100%;
     max-width: none;
@@ -5730,22 +5691,22 @@ footer #sub-footer a {
     text-align: center;
     margin: 0 0 20px;
   }
-  /* line 191, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
+  /* line 157, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
   #newsletter .content p {
     margin: 0 auto;
   }
-  /* line 193, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
+  /* line 159, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
   #newsletter .content p a:hover {
     border-color: #ffffff;
     text-decoration: none !important;
   }
-  /* line 203, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
+  /* line 169, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
   footer .row .col {
     width: 100%;
     max-width: 100%;
     flex: 0 0 100%;
   }
-  /* line 208, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
+  /* line 174, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
   footer .row #lnk_footer {
     width: 100% !important;
     display: flex !important;
@@ -5753,17 +5714,17 @@ footer #sub-footer a {
     justify-content: center !important;
     text-align: center !important;
   }
-  /* line 214, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
+  /* line 180, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
   footer .row #lnk_footer li {
     width: 100% !important;
     margin: 0 0px 5px 0 !important;
     border-bottom: solid 1px #c4c4c4 !important;
   }
-  /* line 218, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
+  /* line 184, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
   footer .row #lnk_footer li:last-child {
     max-width: none !important;
   }
-  /* line 219, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
+  /* line 185, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
   footer .row #lnk_footer li .h4 {
     text-transform: uppercase;
     width: 100%;
@@ -5775,35 +5736,35 @@ footer #sub-footer a {
     background: transparent;
     cursor: pointer;
   }
-  /* line 230, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
+  /* line 196, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
   footer .row #lnk_footer li ul {
     width: 100%;
     padding: 0;
     margin: 0;
     list-style: none;
   }
-  /* line 235, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
+  /* line 201, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
   footer .row #lnk_footer li ul li {
     width: 100%;
     margin: 0 0  5px 0;
     font-size: 0.9rem;
     border-bottom: none !important;
   }
-  /* line 240, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
+  /* line 206, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
   footer .row #lnk_footer li ul li a {
     display: inline-block;
     padding: 5px 15px;
   }
-  /* line 243, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
+  /* line 209, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
   footer .row #lnk_footer li ul li a:hover {
     color: #0b7fba;
   }
-  /* line 260, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
+  /* line 226, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
   footer .row .disclaimer {
     font-size: 0.857rem;
     padding: 0 15px;
   }
-  /* line 265, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
+  /* line 231, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
   footer .row .loghi {
     width: 100%;
     max-width: 350px;
@@ -5815,15 +5776,15 @@ footer #sub-footer a {
     align-content: center;
     list-style: none;
   }
-  /* line 275, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
+  /* line 241, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
   footer .row .loghi li {
     width: 75%;
   }
-  /* line 277, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
+  /* line 243, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
   footer .row .loghi li:first-child {
     max-width: 100px;
   }
-  /* line 280, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
+  /* line 246, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_footer.scss */
   footer .row .loghi li img {
     width: 100%;
     height: auto;

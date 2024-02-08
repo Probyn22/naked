@@ -3,40 +3,6 @@
 
 
 
-#newsletter{
-	width:100%;
-	background: $blu;
-	color:$bianco;
-	text-align: center;
-	padding: 30px 15px;
-	.content{
-
-		max-width:500px;
-		margin:0 auto;
-		display: flex;
-		flex-flow: row wrap;
-		align-items: center;
-		
-		.h4{
-			max-width: 260px;
-			color:$bianco ;
-			text-align: right;
-			margin: 0 20px 0 0;
-			text-transform: uppercase;
-			font-size: 1em
-
-		}
-		p{
-			margin:0;
-			a:hover{
-				border-color:$bianco;
-				text-decoration: none !important;
-			}
-		}
-	
-	}
-}
-
 
 footer{
 	position: relative;
