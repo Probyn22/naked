@@ -40,12 +40,13 @@ $( document ).ready(function() {
 			$('.dropdown-menu').slideUp();
 			$(this).toggleClass('act');
 			if ($(this).hasClass('act')){
-				$('.dropdown-menu').slideUp();
-			}else{
-
 				/*trovo l'id del parent*/
 				var id_mob=$(this).parent().find('a').attr('id');
 				$("#"+id_mob+"-tab").stop().slideDown();
+				
+			}else{
+				$('.dropdown-menu').slideUp();
+				
 			
 			}
 		});
