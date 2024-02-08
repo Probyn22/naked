@@ -163,32 +163,10 @@
 					 background:rgba($bianco, 0.9);
 					border: 0;
 					border-bottom:solid 1px $nero;
-					&:before{
-						content:'';
-						display: block;
-						width:100%;
-						background:$sfondo;
-						height: 25px;
-						position:relative;
-
-					}
-					
-					li{
-						background:transparent;
-						margin: 0;
-						padding:0 0 5px 0;
-						border-left:solid 1px $nero;
-						border-right:solid 1px $nero;
-						&:first-child{
-							padding: 5px 0;
-						}
-						
-					}
-
 					a{
 						font-size:0.9em;
 						border-bottom:none;
-						display: inline-block;
+						display: block;
 						padding:3px 10px;
 						margin: 0 10px;
 						color:$nero;
