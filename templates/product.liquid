@@ -3,15 +3,15 @@
 		<div class="row">
 
 			<div id="column-left" class="col-sm-12 col-md-6">
-				<img src=" {{ image | prouct_img_url: '480x480', scale:2 crop: center}}" alt="pippo"> 
+				<img src=" {{ product | image_url: width: 450 }}" alt=""> 
 				{%- if product.image.size > 0 -%}
-				<img src="{{ image | prouct_img_url: '480x480', scale:2 crop: center}}" alt="{{ product.title | escape }}">
+				<img src="{{ product | img_url: '480x480', scale:2 crop: center}}" alt="{{ product.title | escape }}">
 				{%- if product.image.size > 0 -%}
 					<ul id="thumbnails">
 						{%- for image in product.image -%}
 							<li>
-								<a href="{{ image | prouct_img_url: 'master' }}" target="_blank">
-									<img src="{{ image | prouct_img_url: '240x240', scale:2 crop: center}}" alt="{{ product.title | escape }}">
+								<a href="{{ product | image_url: 'master' }}" target="_blank">
+									<img src="{{ product | image_url: '240x240', scale:2 crop: center}}" alt="{{ product.title | escape }}">
 								</a>
 							</li>
 						{%- endfor -%}
