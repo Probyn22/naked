@@ -8,7 +8,7 @@
 				{%- comment -%}
 				{%- if product.image.size > 0 -%}
 				{%- endcomment -%}
-					<img src="{{ product | img_url: '480x480', scale:2 crop: center}}" alt="{{ product.title | escape }}">
+					<img src="{{ image | product_img_url: '480x480', scale:2 crop: center}}" alt="{{ product.title | escape }}">
 					{%- if product.image.size > 0 -%}
 					<ul id="thumbnails">
 						{%- for image in product.image -%}
