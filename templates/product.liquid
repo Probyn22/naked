@@ -72,6 +72,28 @@ da qui testiamo il codice per creare le varianti
 {% endif %}
 
 
+{% comment %}
+da qui testiamo il codice per creare le varianti google
+{% endcomment %}
+
+{% for variant in product.variants %}
+  <div class="variant">
+    <input type="radio" name="variant" value="{{ variant.id }}" id="{{ variant.id }}">
+    <label for="{{ variant.id }}">{{ variant.title }}</label>
+    <span class="price">{{ variant.price }}</span>
+  </div>
+{% endfor %}
+
+<script>
+  $(document).ready(function() {
+    $('input[name="variant"]').change(function() {
+      var variantId = $(this).val();
+      // Invia una richiesta AJAX per aggiornare il carrello con la variante selezionata
+    });
+  });
+</script>
+
+
 
 	</div>
 
