@@ -76,7 +76,7 @@ da qui testiamo il codice per creare le varianti
 da qui testiamo il codice per creare le varianti google
 {% endcomment %}
 
-{{% for variant in product.variants %}
+{% for variant in product.variants %}
   <div class="variant">
     <input type="radio" name="variant" value="{{ variant.id }}" id="{{ variant.id }}">
     <label for="{{ variant.id }}">{{ variant.title }}</label>
