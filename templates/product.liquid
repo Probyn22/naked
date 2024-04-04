@@ -80,7 +80,7 @@ da qui testiamo il codice per creare le varianti google
   <div class="variant">
     <input type="radio" name="variant" value="{{ variant.id }}" id="{{ variant.id }}">
     <label for="{{ variant.id }}">{{ variant.title }}</label>
-    <span class="price">{{ variant.price }}</span>
+    <span class="price">{{ variant.price | money }}</span>
     <img src="{{ variant.image }}" alt="{{ variant.title }}">
   </div>
 {% endfor %}
