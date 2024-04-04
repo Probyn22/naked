@@ -3,12 +3,19 @@
 	{%- paginate collection.products by 12 -%}
 	<section>
 		{%- for product in collection.products -%}
-			{%- include "product" -%}
+			 <h2>{{ product.title }}</h2>
+			  <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
+			  <p>{{ product.description }}</p>
 		{%- endfor -%}	
 		{%- if paginate.pages > 1 -%}
 			{{ paginate | default_pagination }}
 		{%- endif -%}	
 	</section>
 	{%- endpaginate -%}	
+
+
+
+
+
 
 </main>
