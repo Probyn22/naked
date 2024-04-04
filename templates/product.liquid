@@ -50,6 +50,29 @@
 			<button type="submit" {% unless product.available %} disabled="disabled" {% endunless %}>Add to cart</button>
 		</form>
 
+{% comment %}
+da qui testiamo il codice per creare le varianti
+{% endcomment %}
+
+		{% if product.options.size > 1 %}
+<label for="product-variants">Seleziona la variante:</label>
+<select id="product-variants" name="id">
+    {% for variant in product.variants %}
+      {% assign variantAvailable = true %}
+      {% for option in product.options %}
+        {% unless variant.options contains option %}
+          {% assign variantAvailable = false %}
+        {% endunless %}
+      {% endfor %}
+      {% if variantAvailable %}
+<option value="{{ variant.id }}">{{ variant.title }}</option>
+      {% endif %}
+    {% endfor %}
+</select>
+{% endif %}
+
+
+
 	</div>
 
 </main>
