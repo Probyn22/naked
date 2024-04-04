@@ -1,6 +1,9 @@
 <main>
 	<div id="column-left">
-	{% snippet 'product-image' %}
+	<div class="image-wrapper">
+    {% image image | resize: '200x200' %}
+  </div>
+  
 				
 	</div>
 	<div id="column-right">
