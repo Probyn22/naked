@@ -21,5 +21,19 @@
 			
 				
 	</div>
+	<div id="column-right">
+		<h1>{{ product.title | escape }}</h1>
+		<h5>{{ product.vendor | escape }}</h5>
+		<h3>
+			{% if profuct.price_varies %}
+				{{ product.price_min | money }} - {{ product.price_max | money }} 
+			{% else %}
+				{{ product.price | money }}
+			{% endif %}	
+		</h3>
+		{{ product.description }}
+		
+
+	</div>
 
 </main>
