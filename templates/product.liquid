@@ -1,56 +1,25 @@
-{% include 'dump' with product %} 
 <main>
-	<div class="container">
-		<div class="row">
-
-			<div id="column-left" class="col-sm-12 col-md-6">
-				<img src=" {{ product | image_url: width: 450 }}" alt=""> 
+	<div id="column-left">
+		{%- if product.imeges.size > 0 -%}
+			<img src="{{ image | product_img_url: '480x480', scale 2, crop: 'center'  }}" alt={{ product-title | escape }} />
+			{%- if product.image.size > 0 -%}
+			<ul id="thumbnails">
+				{%- for image in product.images -%}
+				<li>
+					<a href="{{ image | product_img_url: 'master' }}" target="_blanck">
+					<img src="{{ image | product_img_url: '240x240', scale 2, crop: 'center'}}"  alt={{ product-title | escape }} />
+					</a>
+				</li>
+				{%- endfor -%}
 				
-				{%- if product.images.size > 0 -%}
-					<img src="{{ image | product_img_url: '480x480',scale:2,crop: 'center'}}" alt="{{ product.title | escape }}"> 
-					{%- if product.images.size > 0 -%}
-					<ul id="thumbnails">
-						{%- for image in product.images -%}
-							<li>
-								<a href="{{ image | product_img_url: 'master' }}" target="_blank">
-									<img src="{{ image | product_img_url: '240x240', scale:2, crop: 'center'}}" alt="{{ product.title | escape }}">
-								</a>
-							</li>
-						{%- endfor -%}
-					</ul>
-					{%- endif -%}
+				}
+			</ul>
+			{%- endif -%}
+			{%- else -%}
 				{{ 'image' | placeholder_svg_tag }}
-				{%- endif -%}
-					
-			</div>
-			<div id="column-right" class="col-sm-12 col-md-6">
-				<h1>{{ product.title | escape }}</h1>
-				<h5>{{ product.vendor | escape }}</h5>
-				<h3>{% if product.price_varies %} {{ product.price_min | money }} - {{ product.price_max | money }}{% else %} {{ product.price | money }} {% endif %}</h3>
-				{{ product.description }}
-				<form action="/cart/add" method="post" role="form">
-					{%- if product.variants.size > 1 -%}
-					<label for="product-select">
-						Select your {{ product.title | downcase }}
-					</label>
-					<select id="product-select" name="id">
-						{%- for variant in product.variants -%}
-						<option 
-							{% if variant == product.selected_or_first_available_variant %} selected="selected"
-							{% endif %}
-							value="{{variant.id}}"	
-						>
-						{{ variant.title | escape }} - {{ variant.price | money }}
-						</option>
+			{%- endif -%}
+			
+				
+	</div>
 
-						{%- endfor -%}				
-					</select>
-					{%- else -%}
-						<input type="hidden" name="id" value="{{product.variant.first.id }}">
-					{%- endif -%}
-					<button type="submit" {% unless product.avalable %} disabled="disabled" {% endunless %}>Add to cart</button>
-				</form>
-			</div>
-		</div>
-	</div>		
 </main>
