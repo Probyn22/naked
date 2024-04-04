@@ -1,3 +1,14 @@
 <main>
-<h1>{{collection.title | escape }}</h1>
+	<h1>{{collection.title | escape }}</h1>
+	{%- paginate collection.products by 12 -%}
+	<section>
+		{%- for product in collection.products -%}
+			{%- include "product" -%}
+		{%- endfor -%}	
+		{%- if paginate.pages > 1 -%}
+			{{ paginate | default_pagination }}
+		{%- endif -%}	
+	</section>
+	{%- endpaginate -%}	
+
 </main>
