@@ -40,9 +40,13 @@ da qui testiamo il codice per creare le varianti
 recupero l'elenco deu tag del prodotto
 {% endcomment %}
 <ul>
+{% assign partial_tag = 'MODELLO_' %}
 {% for tag in product.tags %}
-    <li>{{ tag }}</li>
+    {% if tag contains partial_tag %}
+        {{ tag }}
+    {% endif %}
 {% endfor %}
+
 </ul>
 
 
