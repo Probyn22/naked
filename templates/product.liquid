@@ -37,21 +37,20 @@ da qui testiamo il codice per creare le varianti
 {% endcomment %}
 <h1>codice per varianti</h1>
 {% comment %}
-recupero l'elenco deu tag del prodotto
+recupero l'elenco il tag modello del prodotto
 {% endcomment %}
-<ul>
+
 {% assign partial_tag = 'MODELLO_' %}
 {% for tag in product.tags %}
     {% if tag contains partial_tag %}
-        {{ tag }}
+       $tag= {{ tag }};
     {% endif %}
 {% endfor %}
 
-</ul>
 
 
 
-	{% assign tag_name = 'MODELLO_151200' %}
+	{% assign tag_name = $tag %}
 {% for product in collections.all.products %}
     {% if product.tags contains tag_name %}
         <a href="{{ product.url }}">
