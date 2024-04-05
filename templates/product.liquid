@@ -36,46 +36,13 @@
 da qui testiamo il codice per creare le varianti
 {% endcomment %}
 <h1>codice per varianti</h1>
-		{% if product.options.size > 1 %}
-<label for="product-variants">Seleziona la variante:</label>
-<select id="product-variants" name="id">
-    {% for variant in product.variants %}
-      {% assign variantAvailable = true %}
-      {% for option in product.options %}
-        {% unless variant.options contains option %}
-          {% assign variantAvailable = false %}
-        {% endunless %}
-      {% endfor %}
-      {% if variantAvailable %}
-<option value="{{ variant.id }}">{{ variant.title }}</option>
-      {% endif %}
-    {% endfor %}
-</select>
-{% endif %}
 
-
-{% comment %}
-da qui testiamo il codice per creare le varianti google
-{% endcomment %}
-
-{% for variant in product.variants %}
-  <div class="variant">
-    <input type="radio" name="variant" value="{{ variant.id }}" id="{{ variant.id }}">
-    <label for="{{ variant.id }}">{{ variant.title }}</label>
-    <span class="price">{{ variant.price | money }}</span>
-    <img src="{{ variant.image }}" alt="{{ variant.title }}">
-  </div>
+	{% assign tag_name = 'MODELLO_151200' %}
+{% for product in collections.all.products %}
+    {% if product.tags contains tag_name %}
+        <a href="{{ product.url }}">{{ product.title }}</a>
+    {% endif %}
 {% endfor %}
-
-<script>
-  $(document).ready(function() {
-    $('input[name="variant"]').change(function() {
-      var variantId = $(this).val();
-      // Invia una richiesta AJAX per aggiornare il carrello con la variante selezionata
-    });
-  });
-</script>
-
 
 
 	</div>
