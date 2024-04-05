@@ -40,26 +40,20 @@ da qui testiamo il codice per creare le varianti
 recupero l'elenco il tag modello del prodotto
 {% endcomment %}
 
-
-
-
-
-{% comment %}
-provo il secondo ciclo
-{% endcomment %}
-
-<h1> ciclo 2</h1>
-
 {% assign partial_tag = 'MODELLO_' %}
 {% assign additional_tag = 'BRAND_' %} 
 
-{% if product.tags contains partial_tag %}
-    {% assign tag_name = partial_tag %}
-{% endif %}
+{% for tag in product.tags %}
+    {% if tag contains partial_tag %}
+        {% assign tag_name = tag %}
+    {% endif %}
+{% endfor %}
 
-{% if product.tags contains additional_tag %}
-    {% assign additional_tag_name = additional_tag %}
-{% endif %}
+{% for tag in product.tags %}
+    {% if tag contains additional_tag %}
+        {% assign additional_tag_name = tag %}
+    {% endif %}
+{% endfor %}
 
 {% for product in collections.all.products %}
     {% if product.tags contains tag_name and product.tags contains additional_tag_name %}
