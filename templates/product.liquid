@@ -40,32 +40,27 @@ da qui testiamo il codice per creare le varianti
 recupero l'elenco il tag modello del prodotto
 {% endcomment %}
 
-
 {% assign partial_tag = 'MODELLO_' %}
-{% assign related_products = collections.all.products | where: 'tags', partial_tag %}
-
-{% for product in related_products %}
-    <a href="{{ product.url }}">
-     {% assign featured_image = product.featured_image %}
-                <img src="{{ featured_image | img_url: 'large' }}" alt="{{ product.title }}">
-    {{ product.title }}</a>
-{% endfor %}
-
-
-
-
-{% assign partial_tag = 'MODELLO_' %}
-{% assign current_product_tags = product.tags | split: ', ' %}
-
-{% for other_product in collections.all.products %}
-    {% if other_product.tags contains partial_tag %}
-        {% assign other_product_tags = other_product.tags | split: ', ' %}
-        {% assign common_tags = current_product_tags | where_exp: 'tag', 'other_product_tags contains tag' %}
-        {% if common_tags.size > 0 %}
-            <a href="{{ other_product.url }}">{{ other_product.title }}</a>
-        {% endif %}
+{% for tag in product.tags %}
+    {% if tag contains partial_tag %}
+        {{ tag }}
     {% endif %}
 {% endfor %}
+
+
+
+
+	{% assign tag_name = 'MODELLO_151200' %}
+{% for product in collections.all.products %}
+    {% if product.tags contains tag_name %}
+        <a href="{{ product.url }}">
+        {% assign featured_image = product.featured_image %}
+		<img src="{{ featured_image | img_url: 'large' }}" alt="{{ product.title }}">
+ {{ product.title }}</a>
+    {% endif %}
+{% endfor %}
+
+
 	</div>
 
 </main>
