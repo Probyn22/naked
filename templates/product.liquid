@@ -43,14 +43,14 @@ recupero l'elenco il tag modello del prodotto
 {% assign partial_tag = 'MODELLO_' %}
 {% for tag in product.tags %}
     {% if tag contains partial_tag %}
-       $tag= {{ tag }};
+       <?php $tag= {{ tag }}; ?>
     {% endif %}
 {% endfor %}
 
 
 
 
-	{% assign tag_name = $tag %}
+	{% assign tag_name = <?php echo $tag ?> %}
 {% for product in collections.all.products %}
     {% if product.tags contains tag_name %}
         <a href="{{ product.url }}">
