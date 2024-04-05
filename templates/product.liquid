@@ -39,10 +39,11 @@ da qui testiamo il codice per creare le varianti
 {% comment %}
 recupero l'elenco deu tag del prodotto
 {% endcomment %}
+<ul>
 {% for tag in product.tags %}
-    {{ tag }}
+    <li>{{ tag }}</li>
 {% endfor %}
-
+</ul>
 
 
 
