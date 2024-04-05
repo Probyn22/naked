@@ -52,6 +52,20 @@ recupero l'elenco il tag modello del prodotto
 {% endfor %}
 
 
+
+
+{% assign partial_tag = 'MODELLO_' %}
+{% assign current_product_tags = product.tags | split: ', ' %}
+
+{% for other_product in collections.all.products %}
+    {% if other_product.tags contains partial_tag %}
+        {% assign other_product_tags = other_product.tags | split: ', ' %}
+        {% assign common_tags = current_product_tags | where_exp: 'tag', 'other_product_tags contains tag' %}
+        {% if common_tags.size > 0 %}
+            <a href="{{ other_product.url }}">{{ other_product.title }}</a>
+        {% endif %}
+    {% endif %}
+{% endfor %}
 	</div>
 
 </main>
