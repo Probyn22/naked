@@ -50,7 +50,7 @@ recupero l'elenco il tag modello del prodotto
 	implemento il ciclo per l'array dei prodotti
 	{% endcomment %}
 
-	{% assign tag_name = {{ tag }} %}
+	{% assign tag_name = '{{ tag }}' %}
 		{% for product in collections.all.products %}
 		    {% if product.tags contains tag_name %}
 		        <a href="{{ product.url }}">
