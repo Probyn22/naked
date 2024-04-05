@@ -36,6 +36,15 @@
 da qui testiamo il codice per creare le varianti
 {% endcomment %}
 <h1>codice per varianti</h1>
+{% comment %}
+recupero l'elenco deu tag del prodotto
+{% endcomment %}
+{% for tag in product.tags %}
+    {{ tag }}
+{% endfor %}
+
+
+
 
 	{% assign tag_name = 'MODELLO_151200' %}
 {% for product in collections.all.products %}
