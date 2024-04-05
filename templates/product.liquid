@@ -45,7 +45,6 @@ recupero l'elenco il tag modello del prodotto
 
 {% for tag in product.tags %}
     {% if tag contains partial_tag %}
-        {{ tag }}
         {% assign tag_name = tag %}
     {% endif %}
 {% endfor %}
