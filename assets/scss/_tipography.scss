@@ -459,8 +459,10 @@ color: $blu;
 #varianti_colore_atelier{
 	h5{
 		width:100%;
-		border-bottom: solid 1px #000;
+		border-bottom: solid 1px #00f;
 		margin: 0 0 15px;
+		padding: 0 0 5px;
+		max-width: 500px;
 	}
 	ul{
 		display: flex;

@@ -580,11 +580,13 @@ strong {
 /* line 460, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_tipography.scss */
 #varianti_colore_atelier h5 {
   width: 100%;
-  border-bottom: solid 1px #000;
+  border-bottom: solid 1px #00f;
   margin: 0 0 15px;
+  padding: 0 0 5px;
+  max-width: 500px;
 }
 
-/* line 465, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_tipography.scss */
+/* line 467, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_tipography.scss */
 #varianti_colore_atelier ul {
   display: flex;
   flex-flow: row wrap;
@@ -598,7 +600,7 @@ strong {
   overflow: hidden;
 }
 
-/* line 476, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_tipography.scss */
+/* line 478, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_tipography.scss */
 #varianti_colore_atelier ul li {
   width: 100%;
   max-width: 40px;
@@ -606,7 +608,7 @@ strong {
   margin: 0 5px 10px;
 }
 
-/* line 481, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_tipography.scss */
+/* line 483, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_tipography.scss */
 #varianti_colore_atelier ul li a {
   width: 100%;
   display: flex;
@@ -619,7 +621,7 @@ strong {
   padding: 5px;
 }
 
-/* line 491, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_tipography.scss */
+/* line 493, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_tipography.scss */
 #varianti_colore_atelier ul li a span {
   width: 25px;
   height: 25px;
@@ -630,7 +632,7 @@ strong {
   position: relative;
 }
 
-/* line 499, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_tipography.scss */
+/* line 501, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_tipography.scss */
 #varianti_colore_atelier ul li a span img {
   position: absolute;
   top: 50%;
@@ -638,13 +640,13 @@ strong {
   transform: translate(-50%, -50%);
 }
 
-/* line 506, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_tipography.scss */
+/* line 508, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_tipography.scss */
 #varianti_colore_atelier ul li a:hover {
   color: #00f;
   font-weight: 600;
 }
 
-/* line 509, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_tipography.scss */
+/* line 511, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_tipography.scss */
 #varianti_colore_atelier ul li a:hover span {
   border-color: #00F;
 }
