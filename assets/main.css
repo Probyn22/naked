@@ -641,9 +641,10 @@ strong {
 /* line 506, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_tipography.scss */
 #varianti_colore_atelier ul li a:hover {
   color: #00f;
+  font-weight: 600;
 }
 
-/* line 508, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_tipography.scss */
+/* line 509, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_tipography.scss */
 #varianti_colore_atelier ul li a:hover span {
   border-color: #00F;
 }
