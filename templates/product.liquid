@@ -102,7 +102,7 @@
 				{% endfor %}
 
 				{% assign additional_tag_name = product.vendor %}
-				
+				{{ additional_tag_name }}
 				<ul>
 				{% for product in collections.all.products %}
 				    {% if product.tags contains tag_name and product.tags contains additional_tag_name %}
