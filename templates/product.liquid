@@ -35,7 +35,8 @@
 {% comment %}
 da qui testiamo il codice per creare le varianti
 {% endcomment %}
-<h1>codice per varianti</h1>
+<div id="varianti_colore_atelier">
+<h5>Disponibile in</h5>
 {% comment %}
 recupero l'elenco il tag modello del prodotto
 {% endcomment %}
@@ -54,12 +55,12 @@ recupero l'elenco il tag modello del prodotto
         {% assign additional_tag_name = tag %}
     {% endif %}
 {% endfor %}
-<ul>
+<ul id="">
 {% for product in collections.all.products %}
     {% if product.tags contains tag_name and product.tags contains additional_tag_name %}
       <li>  <a href="{{ product.url }}">
             {% assign featured_image = product.featured_image %}
-            <img src="{{ featured_image | img_url: 'large' }}" alt="{{ product.title }}">
+            <span class="img"><img src="{{ featured_image | img_url: 'large' }}" alt="{{ product.title }}"></span>
            	{% comment %}
             {{ product.title }}
             {% endcomment %}
@@ -72,7 +73,7 @@ recupero l'elenco il tag modello del prodotto
     {% endif %}
 {% endfor %}
 </ul>
-
+</div>
 
 
 	</div>

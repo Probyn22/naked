@@ -454,3 +454,47 @@ color: $blu;
     }
 }
 
+
+/*varianti colore atelier*/
+#varianti_colore_atelier{
+	ul{
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: flex-start;
+		align-items: flex-start;
+		align-content: flex-start;
+		width: 100%;
+		list-style:none;
+		margin:30px 0;
+		padding:0;
+		overflow:hidden;
+		li{
+			width: 100%;
+			max-width: 25px;
+			overflow: hidden;
+			margin:0 2.5px 10px;
+			a{
+				width: 100%;
+				display: flex;
+				flex-flow: row wrap;
+				justify-content: center;
+				align-items: flex-start;
+				align-content: flex-start;
+				overflow: hidden;
+				font-size:0.9em;
+				span{
+					width: 25px;
+					height: 25px;
+					border:solid 1px #000;
+					border-radius: 100%;
+					overflow: hidden;
+					margin:0 0 5px;
+
+				}
+
+			}
+
+		}
+	}
+}
+
