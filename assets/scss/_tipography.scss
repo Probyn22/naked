@@ -470,9 +470,9 @@ color: $blu;
 		overflow:hidden;
 		li{
 			width: 100%;
-			max-width: 25px;
+			max-width: 30px;
 			overflow: hidden;
-			margin:0 2.5px 10px;
+			margin:0 5px 10px;
 			a{
 				width: 100%;
 				display: flex;
@@ -482,6 +482,7 @@ color: $blu;
 				align-content: flex-start;
 				overflow: hidden;
 				font-size:0.9em;
+				padding:5px;
 				span{
 					width: 25px;
 					height: 25px;

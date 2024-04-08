@@ -594,9 +594,9 @@ strong {
 /* line 471, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_tipography.scss */
 #varianti_colore_atelier ul li {
   width: 100%;
-  max-width: 25px;
+  max-width: 30px;
   overflow: hidden;
-  margin: 0 2.5px 10px;
+  margin: 0 5px 10px;
 }
 
 /* line 476, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_tipography.scss */
@@ -609,9 +609,10 @@ strong {
   align-content: flex-start;
   overflow: hidden;
   font-size: 0.9em;
+  padding: 5px;
 }
 
-/* line 485, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_tipography.scss */
+/* line 486, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_tipography.scss */
 #varianti_colore_atelier ul li a span {
   width: 25px;
   height: 25px;
@@ -622,7 +623,7 @@ strong {
   position: relative;
 }
 
-/* line 493, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_tipography.scss */
+/* line 494, ../../../../../Users/pietrorobertazzi/Works/websites/demo_shopify/naked/assets/scss/_tipography.scss */
 #varianti_colore_atelier ul li a span img {
   position: absolute;
   top: 50%;
