@@ -65,14 +65,13 @@ recupero l'elenco il tag modello del prodotto
             {{ product.title }}
             {% endcomment %}
             {% for tag in product.tags %}
-              {% if tag contains 'COLORESUPER_' %}
-                    {{ tag | remove: 'COLORESUPER_' }}
-                
-                {% else %}
-	                {% if tag contains 'COLORE_' %}
-	                    {{ tag | remove: 'COLORE_' }}
-	                {% endif %}
-	            {% endif %}    
+	            {% if tag contains 'COLORESUPER_' %}
+	                {{ tag | remove: 'COLORESUPER_' }}
+	            {% endif %}  
+		        {% if tag contains 'COLORE_' %}
+	                {{ tag | remove: 'COLORE_' }}
+	            {% endif %}
+	          
             {% endfor %}
         </a></li>
     {% endif %}
